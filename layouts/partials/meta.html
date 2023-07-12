@@ -1,0 +1,22 @@
+<div class="meta">
+  <time>{{ .Date.Format (.Site.Params.dateFormat | default "01·02·2006" ) }}</time>
+  {{ $terms := (.GetTerms "tags") }}
+  {{ if $terms }}
+    <span>—
+    {{ range $key, $value := $terms }}
+      <a href="{{ .Permalink }}">
+        #{{ .Title | lower }}{{ if ne $key (sub (len $terms) 1) }}, {{ end }}
+      </a>
+    {{ end }}
+    </span>
+  {{ end }}
+  <p>
+    {{- if .Description -}}
+    {{- .Description -}}
+    {{- else -}}
+    {{- if .Site.Params.showSummary -}}
+    {{- truncate 140 .Summary -}}
+    {{- end -}}
+    {{- end -}}
+  </p>
+</div>
