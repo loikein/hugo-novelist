@@ -1,6 +1,6 @@
 ---
 title: "Lorem ipsum magni dolores eos qui ratione voluptatem"
-description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem"
+# description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem"
 date: "2015-09-08"
 tags:
 - Lorem

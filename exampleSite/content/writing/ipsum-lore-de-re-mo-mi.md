@@ -1,6 +1,6 @@
 ---
 title: "Lorem ipsum te"
-description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem"
+# description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem"
 date: "2014-09-08"
 tags:
 - Lorem

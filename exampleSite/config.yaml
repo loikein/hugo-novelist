@@ -1,6 +1,10 @@
-baseurl: ""
+baseurl: "https://example.com/"
 languageCode: "en-US"
-title: "John Johnson"
+title: "Mary Sue"
+theme: novelist
+themesDir: "../.."
+canonifyurls: true
+
 googleAnalytics: ""
 disqusShortname: ""
 preserveTaxonomyNames: true
@@ -15,18 +19,18 @@ disableKinds:
   - section
   - categories
   - tags
-theme: novelist
-themesDir: "../../"
+
+params:
+  description: "Since 1973"
+  dateFormat: "2006-02-01"
+  showSummary: false
 
 permalinks:
   writing: /:year/:month/:day/:slug/
 
-params:
-  description: "Since 1987"
-
 frontmatter:
   author: Example
-  github: "https://github.com/ronv"
+  github: "https://github.com/loikein"
   facebook: "https://facebook.com/example"
   og_image: 
   sitename: 
