@@ -3,6 +3,8 @@
 .AppleDouble
 .LSOverride
 
+.hugo_build.lock
+
 # folders
 public/
 _gen/

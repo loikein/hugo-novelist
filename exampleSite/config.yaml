@@ -1,10 +1,10 @@
-baseurl: ''
-languageCode: en-us
-title: John Johnson
+baseurl: ""
+languageCode: "en-US"
+title: "John Johnson"
 googleAnalytics: ""
 disqusShortname: ""
 preserveTaxonomyNames: true
-footnotereturnlinkcontents: ↩
+footnotereturnlinkcontents: "↩"
 disableHugoGeneratorInject: true
 pluralizeListTitles: false
 pygmentsCodeFences: false
@@ -15,6 +15,8 @@ disableKinds:
   - section
   - categories
   - tags
+theme: novelist
+themesDir: "../../"
 
 permalinks:
   writing: /:year/:month/:day/:slug/
@@ -24,11 +26,11 @@ params:
 
 frontmatter:
   author: Example
-  github: 'https://github.com/ronv'
-  facebook: 'https://facebook.com/example'
+  github: "https://github.com/ronv"
+  facebook: "https://facebook.com/example"
   og_image: 
   sitename: 
-  twitter: ''
+  twitter: ""
 
 sitemap:
   changefreq: monthly
