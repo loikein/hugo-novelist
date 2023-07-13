@@ -7,11 +7,12 @@
   {{- range .Pages -}}
   <li>
   <a href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
+  {{- partial "ratings.html" . -}}
   {{- partial "meta.html" . -}}
   </li>
   {{- end -}}
-
 {{- end -}}
+
 </ul>
 
 {{- partial "footer.html" -}}

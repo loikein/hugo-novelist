@@ -20,8 +20,9 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
     + [ ] Set up `exampleSite` \&\& deploy
 - [ ] Style tweaks
     + [x] Centre the main tag
-    + [ ] Adjust date format
-    + [ ] Add rating system
+    + [x] Adjust date format
+    + [x] Add rating system
+- [ ] Add multi-chapter support
 - [ ] Add searching
 - [ ] ...
 
@@ -30,6 +31,50 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
 Icons: [otwarchive/public/images/skins/iconsets](https://github.com/otwcode/otwarchive/tree/master/public/images/skins/iconsets)
 
 Choose among default/low vision? All low vision?
+
+Choose from: \(Quotation marks are required. Can be single quote if you want.\)
+
+- rating:
+    + `"general-audience"`
+    + `"teen"`
+    + `"mature"`
+    + `"explicit"`
+    + `"no"`
+- warning: 
+    + `"choosenotto"`
+    + `"yes"`
+    + `"no"`
+- category:
+    + `"femslash"`
+    + `"het"`
+    + `"gen"`
+    + `"slash"`
+    + `"multi"`
+    + `"other"`
+    + `"no"`
+- complete:
+    + `"no"`
+    + `"yes"`
+
+YAML example:
+
+```yaml
+ratings:
+  rating: "general-audience"
+  warning: "choosenotto"
+  category: "slash"
+  complete: "yes"
+```
+
+TOML example:
+
+```toml
+[ratings]
+rating = "teen"
+warning = "choosenotto"
+category = "femslash"
+complete = "no"
+```
 
 ## Features
 
@@ -54,3 +99,4 @@ Choose among default/low vision? All low vision?
 In `config.yaml`:
 
 - `params.dateFormat` string: Enter any format of the date `Monday, Jan 2, 2006` that is compatible with [Go's Time Format function](https://pkg.go.dev/time#example-Time.Format). See [Hugo documentation](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for a list of simple examples.
+- `params.showSummary` bool: Controls whether the article lists show the beginning of the article (140 words) or not.

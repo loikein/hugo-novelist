@@ -8,6 +8,7 @@
   {{- range .Pages -}}
   <li>
   <a href="{{ .Permalink }}">{{ .Title }}</a>
+  {{- partial "ratings.html" . -}}
   {{- partial "meta.html" . -}}
   </li>
   {{- end -}}

@@ -10,7 +10,8 @@
     {{ end }}
     </span>
   {{ end }}
-  <p>
+  <br>
+  <span>
     {{- if .Description -}}
     {{- .Description -}}
     {{- else -}}
@@ -18,5 +19,5 @@
     {{- truncate 140 .Summary -}}
     {{- end -}}
     {{- end -}}
-  </p>
+  </span>
 </div>

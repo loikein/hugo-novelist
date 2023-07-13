@@ -6,6 +6,12 @@ description = "Guide to emoji usage in Hugo"
 tags = [
     "emoji",
 ]
+[ratings]
+rating = "teen"
+warning = "choosenotto"
+category = "femslash"
+complete = "no"
+
 +++
 
 Emoji can be enabled in a Hugo project in a number of ways. 

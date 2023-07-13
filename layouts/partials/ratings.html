@@ -1,0 +1,29 @@
+{{- if .Params.ratings -}}
+<ul class="required-tags">
+
+<li class="required-tags rating">
+  {{- with .Params.ratings.rating -}}
+  <img src="/images/ratings-default/rating-{{ . }}.png" alt="{{ . }}">
+  {{- end -}}
+</li>
+
+<li class="required-tags warning">
+  {{- with .Params.ratings.warning -}}
+  <img src="/images/ratings-default/warning-{{ . }}.png" alt="{{ . }}">
+  {{- end -}}
+</li>
+
+<li class="required-tags category">
+  {{- with .Params.ratings.category -}}
+  <img src="/images/ratings-default/category-{{ . }}.png" alt="{{ . }}">
+  {{- end -}}
+</li>
+
+<li class="required-tags complete">
+  {{- with .Params.ratings.complete -}}
+  <img src="/images/ratings-default/complete-{{ . }}.png" alt="{{ . }}">
+  {{- end -}}
+</li>
+
+</ul>
+{{- end -}}

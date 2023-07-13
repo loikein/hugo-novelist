@@ -1,7 +1,6 @@
 * {
   font-size: 18px;
   line-height: 1.6em;
-  box-sizing: border-box;
 }
 
 body {
@@ -71,6 +70,7 @@ a:visited {
 
 .list li {
   margin-bottom: 0.5rem;
+  position: relative;
 }
 
 time {
