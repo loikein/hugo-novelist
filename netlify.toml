@@ -9,3 +9,4 @@ HUGO_THEME = "hugo-novelist"
 HUGO_VERSION = "0.115.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+g

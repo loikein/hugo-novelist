@@ -3,9 +3,9 @@
 
 name = "hugo-novelist"
 license = "MIT"
-licenselink = "https://github.com/loikein/novelist/blob/main/LICENSE"
+licenselink = "https://github.com/loikein/hugo-novelist/blob/main/LICENSE"
 description = "Hugo theme for fanfiction writing"
-homepage = "https://github.com/loikein/novelist"
+homepage = "https://github.com/loikein/hugo-novelist"
 demosite = ""
 tags = []
 features = ["responsive", "clean", "minimal", "mobile", "disqus"]
