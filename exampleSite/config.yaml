@@ -1,8 +1,8 @@
 baseurl: "https://hugo-novelist.netlify.app/"
 languageCode: "en-US"
 title: "Mary Sue"
-theme: hugo-novelist
-themesDir: "../.."
+# theme: hugo-novelist
+# themesDir: "../.."
 canonifyurls: true
 
 googleAnalytics: ""
