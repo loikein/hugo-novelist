@@ -1,8 +1,8 @@
 baseurl: "https://hugo-novelist.netlify.app/"
 languageCode: "en-US"
 title: "Mary Sue"
+# uncomment when you use this theme for production:
 # theme: hugo-novelist
-# themesDir: "../.."
 canonifyurls: true
 
 googleAnalytics: ""

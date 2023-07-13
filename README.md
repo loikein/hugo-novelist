@@ -1,6 +1,6 @@
 # Novelist Hugo theme
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/63cbc15f-1f82-4009-8777-e8ed1381c6bc/deploy-status)](https://app.netlify.com/sites/hugo-novelist/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/87c7da96-8f24-4277-bb4d-6202b039ebdc/deploy-status)](https://app.netlify.com/sites/hugo-novelist/deploys)
 
 Novelist is content focused, minimal theme for Hugo, suitable for fanfiction writings. It aims at a feature set similar to [Archive of Our Own](https://archiveofourown.org/).
 
@@ -19,7 +19,7 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
     + [x] Add `theme.toml`
     + [x] Clean up layout code
     + [ ] Add i18n
-    + [ ] Set up `exampleSite` \&\& deploy
+    + [x] Set up `exampleSite` \&\& deploy
 - Style tweaks
     + [x] Centre the main tag
     + [x] Adjust date format
@@ -40,11 +40,18 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
 
 ### Rating system
 
-Icons: [otwarchive/public/images/skins/iconsets](https://github.com/otwcode/otwarchive/tree/master/public/images/skins/iconsets)
+Copyright acknowledgement: [`./exampleSite/content/rating-description.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/rating-description.md)
 
-Copyright acknowledgement: `./exampleSite/content/rating-description.md`
+```md
+This theme follows the [symbol system used on AO3](https://archiveofourown.org/help/symbols-key.html), with the following changes:
 
-You can choose from: \(Quotation marks are required. Can be single quote if you want.\)
+- Removing the external work mark and the completion status unknown mark \(because presumably all the works that you post here are your originals, and you know whether they are completed or not\);
+- Enlarging the "Other relationships" icon to make it the same size with others.
+
+All the graphics \(default large and lvy versions\) and words below and within all tagging areas were taken from the [otwarchive repository](https://github.com/otwcode/otwarchive/), used under GNU General Public License v2.0. All rights reserved by the Organization for Transformative Works.
+```
+
+For each writing \(for multi-chapters only the `_index` file counts\), you can choose from: \(Quotation marks are required. Can be single quote if you want.\)
 
 - rating:
     + `"general-audience"`
@@ -68,7 +75,7 @@ You can choose from: \(Quotation marks are required. Can be single quote if you 
     + `"no"`
     + `"yes"`
 
-YAML example:
+YAML front matter example:
 
 ```yaml
 ratings:
@@ -78,7 +85,7 @@ ratings:
   complete: "yes"
 ```
 
-TOML example:
+TOML front matter example:
 
 ```toml
 [ratings]
@@ -96,20 +103,21 @@ complete = "no"
 - System fonts
 - Anchor links
 - NO JS!
-- ~~AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest~~
+- ~~AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest~~ \(Untested\)
 - Responsive design
 - Tags and tag pages
 - ~~Inline CSS~~
 - Atom feed
 - Json feed
-- Related content (internal links)
-- Sass
+- ~~Related content (internal links)~~
+- ~~Sass~~ SCSS
 - SEO optimized (Twitter cards, Facebook Open Graph, Schema.org)
 
-## Customisation
+## Site Customisation
 
 In `config.yaml`:
 
+- `params.description` string: The subtitle under your site title.
 - `params.dateFormat` string: Enter any format of the date `Monday, Jan 2, 2006` that is compatible with [Go's Time Format function](https://pkg.go.dev/time#example-Time.Format). See [Hugo documentation](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for a list of simple examples.
 - `params.showSummary` bool: Controls whether the article lists show the beginning of the article (140 words) or not.
 - `params.lowVisionSymbols` bool: Controls whether to use the low vision version of ratings symbols or not.
