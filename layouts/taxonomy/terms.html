@@ -1,14 +1,17 @@
 {{/* layouts/taxonomy/terms.html */}}
 
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-  <h1>Tags</h1>
-  <ul class="list">
-    {{ range .Data.Terms.Alphabetical }}
-      <li>
-          <a href="{{ .Page.Permalink }}">({{ .Count }}) {{ .Page.Title | lower }}</a>
-      </li>
-    {{ end }}
-  </ul>
+<h2>
+{{ partial "tag-sign.html" . }}{{ .Type | title }}
+</h2>
 
-{{ partial "footer.html" . }}
+<ul class="list">
+  {{ range .Data.Terms.Alphabetical }}
+    <li>
+        <a href="{{ .Page.Permalink }}">({{ .Count }}) {{ .Page.Title }}</a>
+    </li>
+  {{ end }}
+</ul>
+
+{{ end }}

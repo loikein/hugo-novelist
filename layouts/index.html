@@ -1,13 +1,20 @@
 {{ define "main" }}
 
 {{- .Content -}}
-{{/*
-  https://discourse.gohugo.io/t/how-to-select-both-pages-and-sections-on-the-same-level/17205/7
-*/}}
+
+<p>View by:</p>
+<ul>
+  <li><a href="/fandoms/">Fandoms</a></li>
+  <li><a href="/characters/">Characters</a></li>
+  <li><a href="/tags/">Tags</a></li>
+</ul>
+<p>Or see everything:</p>
 
 <!-- <h2><a href="/writing/">Writing</a></h2> -->
 <h2>Writing</h2>
-
+{{/*
+  https://discourse.gohugo.io/t/how-to-select-both-pages-and-sections-on-the-same-level/17205/7
+*/}}
 {{- $writings := slice -}}
 {{- range (where .Site.Pages "Section" "writing" ) -}}
   {{ if eq (print .Parent) (print ($.Site.GetPage "writing")) }}

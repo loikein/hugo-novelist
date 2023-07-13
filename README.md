@@ -26,9 +26,10 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
 - New functionalities
     + [x] Add multi-chapter support
     + [ ] Add prev page next page buttons
-    + [ ] Dark mode
     + [ ] Add archive pages
-    + [ ] More taxonomies \(minimal: by fandom\)
+    + [x] More taxonomies \(fandoms, characters\)
+    + [ ] Dark mode
+    + [ ] Add jump to main button
     + [ ] Get the extra privacy version of the social shortcodes
     + [ ] Add searching
 - Fix new bugs
@@ -93,10 +94,10 @@ complete = "no"
 - System fonts
 - Anchor links
 - NO JS!
-- AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest
+- ~~AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest~~
 - Responsive design
 - Tags and tag pages
-- Inline CSS
+- ~~Inline CSS~~
 - Atom feed
 - Json feed
 - Related content (internal links)

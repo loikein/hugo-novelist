@@ -1,12 +1,10 @@
 {{ define "main" }}
 
-<h1>
-{{ .Title }}
-{{- partial "ratings.html" . -}}
-</h1>
-{{- partial "meta.html" . -}}
+<h2>
+{{ partial "tag-sign.html" . }}{{ .Title }}
+</h2>
 
-{{/* printf "%t" .Params */}}
+{{/* printf "%t" .Type */}}
 
 {{- .Content -}}
 

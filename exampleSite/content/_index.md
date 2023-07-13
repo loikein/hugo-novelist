@@ -1,4 +1,4 @@
 ---
 title: Home
 ---
-Welcome. This is where I put my writings.
+Oh hey. Welcome, to my reimagination of AO3. This message is customisable.

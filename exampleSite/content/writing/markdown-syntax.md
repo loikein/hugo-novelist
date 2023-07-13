@@ -5,6 +5,10 @@ date: '2019-03-11'
 # description: >-
 #   Sample article showcasing basic Markdown syntax and formatting for HTML
 #   elements.
+fandoms: "Greatest TV Show"
+characters:
+  - "A (Greatest TV Show)"
+  - "B (Greatest TV Show)"
 tags:
   - markdown
   - LineageOS
@@ -13,6 +17,9 @@ tags:
   - css
   - html
   - themes
+  - more
+  - tags
+  - more!!!
 ratings:
   rating: "general-audience"
   warning: "choosenotto"

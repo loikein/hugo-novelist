@@ -26,6 +26,11 @@ params:
   showSummary: false
   lowVisionSymbols: false
 
+taxonomies:
+  tag: tags
+  fandom: fandoms
+  character: characters
+
 markup:
   goldmark:
     renderer:
