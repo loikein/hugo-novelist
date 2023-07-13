@@ -1,7 +1,7 @@
-baseurl: "https://example.com/"
+baseurl: "https://hugo-novelist.netlify.app/"
 languageCode: "en-US"
 title: "Mary Sue"
-theme: novelist
+theme: hugo-novelist
 themesDir: "../.."
 canonifyurls: true
 
