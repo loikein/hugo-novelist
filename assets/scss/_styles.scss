@@ -4,16 +4,20 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
-    helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial,
-    sans-serif;
+  font-family: $font-sans-serif, $font-emoji;
   padding: 2rem;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+.home {
+  h2 {
+    margin-top: 4rem;
+  }
+}
+
 main {
-  max-width: 70ch;
+  max-width: $main-width;
   margin: 0 auto;
 }
 
@@ -23,7 +27,11 @@ footer {
   margin-bottom: 4rem;
 }
 
-h1:first-child {
+header div.site-title {
+  font-weight: bold;
+}
+
+h1:first-of-type {
   margin: 0;
 }
 
@@ -34,12 +42,12 @@ img {
 
 .meta {
   color: #777;
-}
 
-.meta span a {
-  color: #777;
-  display: inline;
-  text-decoration: none;
+  span a {
+    color: #777;
+    display: inline;
+    text-decoration: none;
+  }
 }
 
 pre,
@@ -49,27 +57,28 @@ code {
 
 pre {
   margin-bottom: 2rem;
+
+  code {
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+  }
 }
 
-pre code {
-  display: block;
-  padding: 1em;
-  overflow-x: auto;
-}
-
-a,
-a:visited {
-  color: initial
+a {
+  &, &:visited {
+    color: initial
+  }
 }
 
 .list {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-}
 
-.list li {
-  margin-bottom: 0.5rem;
+  li {
+    margin-bottom: 0.5rem;
+  }
 }
 
 time {

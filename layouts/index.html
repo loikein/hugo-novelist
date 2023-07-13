@@ -17,7 +17,7 @@
   {{ end }}
 {{- end -}}
 
-<ul class="list">
+<ul class="list writing">
   {{ range (sort $writings "Date" "desc") }}
   <li>
   <a href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>

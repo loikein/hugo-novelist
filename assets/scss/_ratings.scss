@@ -47,7 +47,15 @@ ul.required-tags {
 }
 
 @media screen and (max-width: ($medium + $rating-size + $rating-right-shift)) {
-  .list {
-    padding-left: $rating-size + $rating-right-shift;
+  .writing.list {
+    // padding also works here
+    margin-left: $rating-size + $rating-right-shift;
+  }
+
+  .writing h1 {
+    &,+ .meta {
+      // padding does not work here
+      margin-left: $rating-size + $rating-right-shift;
+    }
   }
 }

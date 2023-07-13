@@ -1,6 +1,10 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
-{{ .Content | replaceRE "(<h[1-6]\\sid=\"([^\"]+)\"\\s?>)(.+)(</h[1-6]+>)" "${1}${3} <a href=\"#${2}\">#</a>${4}" | safeHTML }}
+<h1>
+{{ .Title }}
+{{- partial "ratings.html" . -}}
+</h1>
+{{- partial "meta.html" . -}}
+{{ .Content }}
 
 {{ end }}

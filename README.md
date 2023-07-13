@@ -22,10 +22,15 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
     + [x] Centre the main tag
     + [x] Adjust date format
     + [x] Add rating system
+    + [ ] Do something about the code fence styling
 - New functionalities
     + [x] Add multi-chapter support
+    + [ ] Add prev page next page buttons
+    + [ ] Dark mode
+    + [ ] Add archive pages
+    + [ ] More taxonomies \(minimal: by fandom\)
+    + [ ] Get the extra privacy version of the social shortcodes
     + [ ] Add searching
-    + [ ] More taxonomies
 - Fix new bugs
     + [ ] Section permalink shenanigan
 - ...
@@ -34,9 +39,9 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
 
 Icons: [otwarchive/public/images/skins/iconsets](https://github.com/otwcode/otwarchive/tree/master/public/images/skins/iconsets)
 
-Choose among default/low vision? All low vision?
+Copyright acknowledgement: `./exampleSite/content/rating-description.md`
 
-Choose from: \(Quotation marks are required. Can be single quote if you want.\)
+You can choose from: \(Quotation marks are required. Can be single quote if you want.\)
 
 - rating:
     + `"general-audience"`
@@ -104,3 +109,4 @@ In `config.yaml`:
 
 - `params.dateFormat` string: Enter any format of the date `Monday, Jan 2, 2006` that is compatible with [Go's Time Format function](https://pkg.go.dev/time#example-Time.Format). See [Hugo documentation](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for a list of simple examples.
 - `params.showSummary` bool: Controls whether the article lists show the beginning of the article (140 words) or not.
+- `params.lowVisionSymbols` bool: Controls whether to use the low vision version of ratings symbols or not.

@@ -24,6 +24,12 @@ params:
   description: "Since 1973"
   dateFormat: "2006-01-02"
   showSummary: false
+  lowVisionSymbols: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 permalinks:
   page:

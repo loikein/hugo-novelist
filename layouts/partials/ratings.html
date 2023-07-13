@@ -1,29 +1,34 @@
 {{- if .Params.ratings -}}
-<ul class="required-tags">
+{{- $path := "/images/ratings-default/" -}}
+{{- if .Site.Params.lowVisionSymbols -}}
+  {{- $path = "/images/ratings-lvy/lvy-" -}}
+{{- end -}}
+<ul class="required-tags"><a href="/symbols-description/">
 
 <li class="required-tags rating">
   {{- with .Params.ratings.rating -}}
-  <img src="/images/ratings-default/rating-{{ . }}.png" alt="{{ . }}">
+  <img src="{{ $path }}rating-{{ . }}.png" alt="{{ . }}">
   {{- end -}}
 </li>
 
 <li class="required-tags warning">
   {{- with .Params.ratings.warning -}}
-  <img src="/images/ratings-default/warning-{{ . }}.png" alt="{{ . }}">
+  <img src="{{ $path }}warning-{{ . }}.png" alt="{{ . }}">
   {{- end -}}
 </li>
 
 <li class="required-tags category">
   {{- with .Params.ratings.category -}}
-  <img src="/images/ratings-default/category-{{ . }}.png" alt="{{ . }}">
+  <img src="{{ $path }}category-{{ . }}.png" alt="{{ . }}">
   {{- end -}}
 </li>
 
 <li class="required-tags complete">
   {{- with .Params.ratings.complete -}}
-  <img src="/images/ratings-default/complete-{{ . }}.png" alt="{{ . }}">
+  <img src="{{ $path }}complete-{{ . }}.png" alt="{{ . }}">
   {{- end -}}
 </li>
 
+</a>
 </ul>
 {{- end -}}

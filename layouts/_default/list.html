@@ -1,13 +1,16 @@
 {{ define "main" }}
 
-<h1>
 {{ if eq .Type "taxonomy" }}
+<h1>
 #{{ .Title | lower }}
+</h1>
 {{ else }}
+<h1>
 {{ .Title }}
 {{- partial "ratings.html" . -}}
-{{ end }}
 </h1>
+{{ end }}
+{{- partial "meta.html" . -}}
 
 {{/* printf "%t" .Params */}}
 
