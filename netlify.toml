@@ -6,6 +6,6 @@ publish = "exampleSite/public"
 HUGO_THEME = "hugo-novelist"
 
 [context.production.environment]
-HUGO_VERSION = "0.111.3"
+HUGO_VERSION = "0.115.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
