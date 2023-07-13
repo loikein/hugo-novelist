@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+{{ partial "head.html" . }}
+
+{{ partial "schema.html" . }}
+</head>
+
+{{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
+<body class="{{ if .IsHome }}home{{ else }}{{ $.Scratch.Get "section" }}{{ end }}">
+<main>
+<header>
+{{ partial "header.html" . }}
+</header>
+
+{{- block "main" . }}{{- end }}
+
+<footer>
+{{ partial "footer.html" . }}
+</footer>
+</main>
+</body>
+</html>

@@ -12,19 +12,23 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
 
 ### TODO
 
-- [ ] Housekeeping
+- Housekeeping
     + [x] Clean up temp files
     + [x] Add `theme.toml`
-    + [ ] Clean up layout code
+    + [x] Clean up layout code
     + [ ] Add i18n
     + [ ] Set up `exampleSite` \&\& deploy
-- [ ] Style tweaks
+- Style tweaks
     + [x] Centre the main tag
     + [x] Adjust date format
     + [x] Add rating system
-- [ ] Add multi-chapter support
-- [ ] Add searching
-- [ ] ...
+- New functionalities
+    + [x] Add multi-chapter support
+    + [ ] Add searching
+    + [ ] More taxonomies
+- Fix new bugs
+    + [ ] Section permalink shenanigan
+- ...
 
 ### Rating system
 

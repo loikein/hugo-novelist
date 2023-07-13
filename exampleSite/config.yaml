@@ -15,18 +15,21 @@ pygmentsCodeFences: false
 pygmentsUseClasses: false
 minify: false
 paginate: 9999
-disableKinds:
-  - section
-  - categories
-  - tags
+# disableKinds:
+#   - section
+#   - categories
+#   - tags
 
 params:
   description: "Since 1973"
-  dateFormat: "2006-02-01"
+  dateFormat: "2006-01-02"
   showSummary: false
 
 permalinks:
-  writing: /:year/:month/:day/:slug/
+  page:
+    writing: /:section/:year-:month-:day-:slug/
+  section:
+    writing: /:section/:year-:month-:day-:slug/
 
 frontmatter:
   author: Example

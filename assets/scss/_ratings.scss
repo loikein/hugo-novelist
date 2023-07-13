@@ -4,6 +4,11 @@ $rating-size: 2 * ($rating-width + $rating-gap);
 $rating-top-shift: 1px;
 $rating-right-shift: 10px;
 
+.list li,
+h1 {
+  position: relative;
+}
+
 ul.required-tags {
   position: absolute;
   top: $rating-top-shift;

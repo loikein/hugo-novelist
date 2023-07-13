@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Ronalds Vilcins - {{ .Site.BaseURL }}">
+<title>{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+<link rel="canonical" href="{{ .Permalink | absURL }}">
+<link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}atom.xml" />
+<link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}feed.json" />
+<link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+
+{{/* normalize */}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+{{/* Theme stylesheet, you can customize scss by creating `assets/custom.scss` in your website */}}
+{{- $styles := resources.Get "scss/novelist.scss" | resources.ExecuteAsTemplate "novelist.scss" . | resources.ToCSS | resources.Minify }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
+{{/* custom CSS (site wide) under ./assets/css/ */}}
+{{ if .Site.Params.customCSS }}
+{{ $style := resources.Match "css/**.css" | resources.Concat "custom.css" | minify }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" media="screen" />
+{{ end }}
