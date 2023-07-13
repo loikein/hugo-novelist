@@ -1,5 +1,7 @@
 # Novelist Hugo theme
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/63cbc15f-1f82-4009-8777-e8ed1381c6bc/deploy-status)](https://app.netlify.com/sites/hugo-novelist/deploys)
+
 Novelist is content focused, minimal theme for Hugo, suitable for fanfiction writings. It aims at a feature set similar to [Archive of Our Own](https://archiveofourown.org/).
 
 Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
