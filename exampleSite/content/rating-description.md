@@ -10,7 +10,7 @@ This theme follows the [symbol system used on AO3](https://archiveofourown.org/h
 - Removing the external work mark and the completion status unknown mark \(because presumably all the works that you post here are your originals, and you know whether they are completed or not\);
 - Enlarging the "Other relationships" icon to make it the same size with others.
 
-All the graphics \(default large and lvy versions\) and words below and within all tagging areas were taken from the [otwarchive repository](https://github.com/otwcode/otwarchive/), used under GNU General Public License v2.0, all rights go back to Organization for Transformative Works.
+All the graphics \(default large and lvy versions\) and words below and within all tagging areas were taken from the [otwarchive repository](https://github.com/otwcode/otwarchive/), used under GNU General Public License v2.0. All rights reserved by the Organization for Transformative Works.
 
 ## Content rating
 
