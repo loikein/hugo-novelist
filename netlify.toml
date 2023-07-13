@@ -3,4 +3,9 @@ command = "cd exampleSite && hugo --buildDrafts --minify --gc --themesDir .. --t
 publish = "exampleSite/public"
 
 [build.environment]
-HUGO_THEME = "novelist"
+HUGO_THEME = "hugo-novelist"
+
+[context.production.environment]
+HUGO_VERSION = "0.111.3"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
