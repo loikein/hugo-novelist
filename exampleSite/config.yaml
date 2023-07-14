@@ -3,17 +3,16 @@ languageCode: "en-US"
 title: "Mary Sue"
 # uncomment when you use this theme for production:
 # theme: hugo-novelist
+# building locally:
+# hugo serve --buildDrafts --disableFastRender --themesDir .. --theme .
 canonifyurls: true
 
 googleAnalytics: ""
 disqusShortname: ""
-preserveTaxonomyNames: true
 footnotereturnlinkcontents: "↩"
-disableHugoGeneratorInject: true
 pluralizeListTitles: false
 pygmentsCodeFences: false
 pygmentsUseClasses: false
-minify: false
 paginate: 9999
 # disableKinds:
 #   - section

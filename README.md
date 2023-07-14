@@ -27,6 +27,7 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
     + [ ] Do something about the code fence styling
 - New functionalities
     + [x] Add multi-chapter support
+    + [ ] Add age confirmation modal for M \& E rated writings
     + [ ] Add prev page next page buttons
     + [ ] Add archive pages
     + [x] More taxonomies \(fandoms, characters\)
