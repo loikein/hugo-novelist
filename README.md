@@ -119,6 +119,7 @@ complete = "no"
 
 In `config.yaml`:
 
+- `params.customCSS` bool: Turn on/off site-specific custom CSS. All `.css` files located under `/site/assets/css/` will be included. See the example site folder for an example (not turned-on).
 - `params.enableRatings` bool: Site-wide switch for turning on/off the AO3 rating system. Only controls the display. You can still save the ratings for your own reference purpose.
 - `params.description` string: The subtitle under your site title.
 - `params.dateFormat` string: Enter any format of the date `Monday, Jan 2, 2006` that is compatible with [Go's Time Format function](https://pkg.go.dev/time#example-Time.Format). See [Hugo documentation](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for a list of simple examples.
