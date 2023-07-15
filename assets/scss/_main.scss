@@ -1,0 +1,47 @@
+* {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+body {
+  font-family: $font-sans-serif, $font-emoji;
+  padding: $margin-2;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  max-width: $main-width;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+header div.site-title {
+  font-weight: bold;
+}
+
+.meta {
+  color: #777;
+  margin-bottom: $margin-2;
+
+  span a {
+    color: #777;
+    display: inline;
+    text-decoration: none;
+  }
+}
+
+a {
+  &, &:visited {
+    color: initial
+  }
+}
+
+time {
+  color: #777;
+  font-variant-numeric: tabular-nums;
+}

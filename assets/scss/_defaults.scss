@@ -3,5 +3,12 @@ $font-sans-serif: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
     sans-serif;
 $font-emoji: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
 
-$medium: 867px;
-$main-width: 70ch;
+$medium: 867px !default;
+$main-width: 70ch !default;
+
+$font-size-base: 18px !default;
+$line-height-base: 1.6rem !default;
+
+$margin-1: 1rem;
+$margin-2: 2rem;
+$margin-4: 4rem;

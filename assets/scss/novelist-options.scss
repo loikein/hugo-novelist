@@ -1,0 +1,5 @@
+{{ with .Site.Params.hrGlyph }}
+hr::after {
+  content: "{{ . }}";
+}
+{{ end }}

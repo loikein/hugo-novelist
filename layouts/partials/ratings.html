@@ -1,3 +1,4 @@
+{{- if .Site.Params.enableRatings -}}
 {{- if .Params.ratings -}}
 {{- $path := "/images/ratings-default/" -}}
 {{- if .Site.Params.lowVisionSymbols -}}
@@ -31,4 +32,5 @@
 
 </a>
 </ul>
+{{- end -}}
 {{- end -}}

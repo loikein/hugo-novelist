@@ -22,8 +22,13 @@ paginate: 9999
 params:
   description: "Since 1973"
   dateFormat: "2006-01-02"
-  showSummary: false
+  enableRatings: true
+  # Glyph used for <hr>
+  # Some suggestions: section sign ("§"), asterism ("⁂"), pilcrow ("❡"), fleuron ("❧")
+  # If you want to use Unicode Characters, type double slash like this: "\\12199"
+  hrGlyph: "⁂"
   lowVisionSymbols: false
+  showSummary: false
 
 taxonomies:
   tag: tags

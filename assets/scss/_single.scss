@@ -1,0 +1,54 @@
+h1, h2, h3, h4, h5, h6 {
+  margin-top: $margin-2;
+  margin-bottom: $margin-2;
+}
+
+h1:first-of-type {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  margin-top: $margin-1;
+  margin-bottom: $margin-1;
+}
+
+pre,
+code {
+  background: #eee;
+}
+
+pre {
+  margin-bottom: $margin-2;
+
+  code {
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+  }
+}
+
+blockquote {
+  border-left: 2px solid #777;
+  padding: .5rem 1rem;
+  margin: $margin-2 0
+}
+
+hr {
+  padding: 0;
+  border: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  height: $line-height-base;
+  margin-top: $margin-2;
+  margin-bottom: $margin-2;
+
+  &::after {
+    content: "⁂";
+  }
+}

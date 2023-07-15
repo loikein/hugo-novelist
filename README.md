@@ -18,19 +18,20 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
     + [x] Clean up temp files
     + [x] Add `theme.toml`
     + [x] Clean up layout code
-    + [ ] Add i18n
     + [x] Set up `exampleSite` \&\& deploy
+    + [ ] Add i18n
 - Style tweaks
     + [x] Centre the main tag
     + [x] Adjust date format
     + [x] Add rating system
+    + [x] Custom `<hr>` glyph
     + [ ] Do something about the code fence styling
 - New functionalities
     + [x] Add multi-chapter support
+    + [x] More taxonomies \(fandoms, characters\)
     + [ ] Add age confirmation modal for M \& E rated writings
     + [ ] Add prev page next page buttons
     + [ ] Add archive pages
-    + [x] More taxonomies \(fandoms, characters\)
     + [ ] Dark mode
     + [ ] Add jump to main button
     + [ ] Get the extra privacy version of the social shortcodes
@@ -118,7 +119,9 @@ complete = "no"
 
 In `config.yaml`:
 
+- `params.enableRatings` bool: Site-wide switch for turning on/off the AO3 rating system. Only controls the display. You can still save the ratings for your own reference purpose.
 - `params.description` string: The subtitle under your site title.
 - `params.dateFormat` string: Enter any format of the date `Monday, Jan 2, 2006` that is compatible with [Go's Time Format function](https://pkg.go.dev/time#example-Time.Format). See [Hugo documentation](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for a list of simple examples.
 - `params.showSummary` bool: Controls whether the article lists show the beginning of the article (140 words) or not.
 - `params.lowVisionSymbols` bool: Controls whether to use the low vision version of ratings symbols or not.
+- `params.hrGlyph` string: Glyph used for the `<hr>` element. The quotation marks are required. Also, if you want to use Unicode Characters, you must type an extra slash like this: `"\\12199"`.
