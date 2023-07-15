@@ -47,12 +47,12 @@ ul.required-tags {
 }
 
 @media screen and (max-width: ($medium + $rating-size + $rating-right-shift)) {
-  .writing.list {
+  .list:has(.required-tags) {
     // padding also works here
     margin-left: $rating-size + $rating-right-shift;
   }
 
-  .writing h1 {
+  .writing h1:has(.required-tags) {
     &,+ .meta {
       // padding does not work here
       margin-left: $rating-size + $rating-right-shift;
