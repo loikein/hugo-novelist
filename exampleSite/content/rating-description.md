@@ -5,12 +5,12 @@ date: 2023-07-13
 _build:
   list: never
 ---
-This theme follows the [symbol system used on AO3](https://archiveofourown.org/help/symbols-key.html), with the following changes:
+This theme uses the symbol system from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under GNU General Public License v2.0, with the following changes:
 
 - Removing the external work mark and the completion status unknown mark \(because presumably all the works that you post here are your originals, and you know whether they are completed or not\);
-- Enlarging the "Other relationships" icon to make it the same size with others.
+- Enlarging the "Other relationships" icon to make it the same size with other icons.
 
-All the graphics \(default large and lvy versions\) and words below and within all tagging areas were taken from the [otwarchive repository](https://github.com/otwcode/otwarchive/), used under GNU General Public License v2.0. All rights reserved by the Organization for Transformative Works.
+All rights reserved by the Organization for Transformative Works.
 
 ## Content rating
 

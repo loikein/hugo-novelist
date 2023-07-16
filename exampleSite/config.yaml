@@ -27,7 +27,7 @@ params:
   # Glyph used for <hr>
   # Some suggestions: section sign ("§"), asterism ("⁂"), pilcrow ("❡"), fleuron ("❧")
   # If you want to use Unicode Characters, type double slash like this: "\\12199"
-  hrGlyph: "⁂"
+  hrGlyph: "❧"
   lowVisionSymbols: false
   showSummary: false
 

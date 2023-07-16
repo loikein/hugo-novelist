@@ -10,9 +10,6 @@ characters:
   - "A (Greatest TV Show)"
   - "B (Greatest TV Show)"
 tags:
-  - markdown
-  - LineageOS
-  - CC BY-SA
   - Testing
   - css
   - html
@@ -25,6 +22,9 @@ ratings:
   warning: "choosenotto"
   category: "slash"
   complete: "yes"
+external:
+  title: "External link"
+  link: "#"
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.

@@ -25,33 +25,43 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
     + [x] Adjust date format
     + [x] Add rating system
     + [x] Custom `<hr>` glyph
-    + [ ] Do something about the code fence styling
 - New functionalities
     + [x] Add multi-chapter support
     + [x] More taxonomies \(fandoms, characters\)
-    + [ ] Add age confirmation modal for M \& E rated writings
-    + [ ] Add jump link to external sources (meta)
+    + [x] Add age warning modal for M \& E rated writings
+    + [x] Add jump link to external sources (meta)
     + [ ] Add prev page next page buttons (multi-chapter)
     + [ ] Add archive pages
     + [ ] Dark mode
     + [ ] Add jump to main button
     + [ ] Get the extra privacy version of the social shortcodes
-    + [ ] Add searching
+    + [ ] Add full-text search
 - Fix new bugs
     + [ ] Section permalink shenanigan
+- Probably won't
+    + Do something about the code fence styling
+    + Support LaTeX
 - ...
+
+### Age warning modal
+
+Copyright acknowledgement:
+
+```md
+This theme uses the adult caution message from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under GNU General Public License v2.0, no changes made. All rights reserved by the Organization for Transformative Works.
+```
 
 ### Rating system
 
 Copyright acknowledgement: [`./exampleSite/content/rating-description.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/rating-description.md)
 
 ```md
-This theme follows the [symbol system used on AO3](https://archiveofourown.org/help/symbols-key.html), with the following changes:
+This theme uses the symbol system from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under GNU General Public License v2.0, with the following changes:
 
 - Removing the external work mark and the completion status unknown mark \(because presumably all the works that you post here are your originals, and you know whether they are completed or not\);
 - Enlarging the "Other relationships" icon to make it the same size with others.
 
-All the graphics \(default large and lvy versions\) and words below and within all tagging areas were taken from the [otwarchive repository](https://github.com/otwcode/otwarchive/), used under GNU General Public License v2.0. All rights reserved by the Organization for Transformative Works.
+All rights reserved by the Organization for Transformative Works.
 ```
 
 For each writing \(for multi-chapters only the `_index` file counts\), you can choose from: \(Quotation marks are required. Can be single quote if you want.\)
@@ -105,7 +115,7 @@ complete = "no"
 - Content focused
 - System fonts
 - Anchor links
-- NO JS!
+- ~~NO JS!~~ This is voided by the addition of age warning modals. Readers can still disable JS which skips the modal, but nothing else is affected.
 - ~~AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest~~ \(Untested\)
 - Responsive design
 - Tags and tag pages
@@ -118,7 +128,9 @@ complete = "no"
 
 ## Site Customisation
 
-In `config.yaml`:
+You can customise the favicon by creating a `favicon.png` file under `/site/static/`.
+
+Customisation options in `config.yaml`:
 
 - `params.customCSS` bool: Turn on/off site-specific custom CSS. All `.css` files located under `/site/assets/css/` will be included. See the example site folder for an example (not turned-on).
 - `params.enableRatings` bool: Site-wide switch for turning on/off the AO3 rating system. Only controls the display. You can still save the ratings for your own reference purpose.
@@ -126,4 +138,4 @@ In `config.yaml`:
 - `params.dateFormat` string: Enter any format of the date `Monday, Jan 2, 2006` that is compatible with [Go's Time Format function](https://pkg.go.dev/time#example-Time.Format). See [Hugo documentation](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for a list of simple examples.
 - `params.showSummary` bool: Controls whether the article lists show the beginning of the article (140 words) or not.
 - `params.lowVisionSymbols` bool: Controls whether to use the low vision version of ratings symbols or not.
-- `params.hrGlyph` string: Glyph used for the `<hr>` element. The quotation marks are required. Also, if you want to use Unicode Characters, you must type an extra slash like this: `"\\12199"`.
+- `params.hrGlyph` string: Glyph used for the `<hr>` element. The quotation marks are required. Also, if you want to use Unicode Characters, you must type an extra slash like this: `"\\2756"`.
