@@ -39,6 +39,12 @@ a {
   &, &:visited {
     color: initial
   }
+
+  &.external-link::before {
+    content: "\00238B";
+    display: inline-block;
+    transform: scaleX(-1);
+  }
 }
 
 time {

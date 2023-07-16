@@ -1,24 +1,29 @@
 <div class="meta">
+{{/* time */}}
 <time>{{ .Date.Format (.Site.Params.dateFormat | default "01·02·2006" ) }}</time>
 
+{{/* tags */}}
 {{ $categories := slice "fandoms" "characters" "tags" }}
 {{ range $k, $v := $categories }}
-
   {{ $terms := ( $.Page.GetTerms $v ) }}
   {{ if $terms }}
-  <span>—
-  {{ range $key, $value := $terms }}
-    <a href="{{ .Permalink }}">
-      {{ partial "tag-sign.html" . }}{{ .Title }}{{ if ne $key (sub (len $terms) 1) }}, {{ end }}
-    </a>
+    <span>—
+    {{ range $key, $value := $terms }}
+      <a href="{{ .Permalink }}">
+        {{ partial "tag-sign.html" . }}{{ .Title }}{{ if ne $key (sub (len $terms) 1) }}, {{ end }}
+      </a>
+    {{ end }}
+    </span>
   {{ end }}
-  </span>
-  {{ end }}
-
 {{ end }}
 
+{{/* external link */}}
+{{ if .Params.external }}
+<span>— <a class="external-link" href="{{ .Params.external.link }}">{{ .Params.external.title }}</a></span>
+{{ end }}
 <br>
 
+{{/* summary */}}
 <span>
   {{- if .Description -}}
   {{- .Description -}}
