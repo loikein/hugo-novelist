@@ -4,29 +4,29 @@
 {{- if .Site.Params.lowVisionSymbols -}}
   {{- $path = "/images/ratings-lvy/lvy-" -}}
 {{- end -}}
-<ul class="required-tags"><a href="/symbols-description/">
+<ul class="required-tags" aria-label="Article ratings"><a href="/symbols-description/">
 
 <li class="required-tags rating">
   {{- with .Params.ratings.rating -}}
-  <img src="{{ $path }}rating-{{ . }}.png" alt="{{ . }}">
+  <img src="{{ $path }}rating-{{ . }}.png" alt="Age rating: {{ . }}">
   {{- end -}}
 </li>
 
 <li class="required-tags warning">
   {{- with .Params.ratings.warning -}}
-  <img src="{{ $path }}warning-{{ . }}.png" alt="{{ . }}">
+  <img src="{{ $path }}warning-{{ . }}.png" alt="Warnings: {{ . }}">
   {{- end -}}
 </li>
 
 <li class="required-tags category">
   {{- with .Params.ratings.category -}}
-  <img src="{{ $path }}category-{{ . }}.png" alt="{{ . }}">
+  <img src="{{ $path }}category-{{ . }}.png" alt="Category: {{ . }}">
   {{- end -}}
 </li>
 
 <li class="required-tags complete">
   {{- with .Params.ratings.complete -}}
-  <img src="{{ $path }}complete-{{ . }}.png" alt="{{ . }}">
+  <img src="{{ $path }}complete-{{ . }}.png" alt="Complete: {{ . }}">
   {{- end -}}
 </li>
 

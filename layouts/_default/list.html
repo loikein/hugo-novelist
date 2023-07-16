@@ -8,6 +8,10 @@
 
 {{/* printf "%t" .Params */}}
 
+{{- if or (eq .Params.ratings.rating "mature") (eq .Params.ratings.rating "explicit") -}}
+  {{- partial "warning-modal.html" . -}}
+{{- end -}}
+
 <article>
 {{- .Content -}}
 

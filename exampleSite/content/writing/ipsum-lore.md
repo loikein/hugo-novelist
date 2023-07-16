@@ -5,5 +5,11 @@ date: "2013-09-08"
 tags:
 - Lorem
 - Ipsum
+ratings:
+  rating: "explicit"
+  warning: "no"
+  category: "multi"
+  complete: "yes"
 ---
 
+Test 

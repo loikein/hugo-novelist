@@ -1,4 +1,4 @@
-<div class="meta">
+<div class="meta" aria-label="Article meta">
 {{/* time */}}
 <time>{{ .Date.Format (.Site.Params.dateFormat | default "01·02·2006" ) }}</time>
 
@@ -29,7 +29,7 @@
   {{- .Description -}}
   {{- else -}}
   {{- if .Site.Params.showSummary -}}
-  {{- truncate 140 .Summary -}}
+  {{- truncate 140 .Summary | plainify -}}
   {{- end -}}
   {{- end -}}
 </span>
