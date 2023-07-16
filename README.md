@@ -4,7 +4,7 @@
 
 Novelist is content focused, minimal theme for Hugo, suitable for fanfiction writings. It aims at a feature set similar to [Archive of Our Own](https://archiveofourown.org/).
 
-Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
+Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
 
 ![Theme screenshot](screenshot1.png)
 
@@ -18,7 +18,7 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
     + [x] Clean up temp files
     + [x] Add `theme.toml`
     + [x] Clean up layout code
-    + [x] Set up `exampleSite` \&\& deploy
+    + [x] Set up `exampleSite` \& deploy
     + [ ] Add i18n
 - Style tweaks
     + [x] Centre the main tag
@@ -30,7 +30,8 @@ Demo: [https://simplist-hugo.netlify.app/](https://simplist-hugo.netlify.app/)
     + [x] Add multi-chapter support
     + [x] More taxonomies \(fandoms, characters\)
     + [ ] Add age confirmation modal for M \& E rated writings
-    + [ ] Add prev page next page buttons
+    + [ ] Add jump link to external sources (meta)
+    + [ ] Add prev page next page buttons (multi-chapter)
     + [ ] Add archive pages
     + [ ] Dark mode
     + [ ] Add jump to main button
