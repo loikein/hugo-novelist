@@ -1,0 +1,10 @@
+body.modal-open article {
+  display: none;
+  visibility: collapse;
+}
+
+.modal {
+  position: relative;
+  border: none;
+  padding: 0;
+}

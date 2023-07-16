@@ -1,0 +1,14 @@
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function(event) {
+  const body = document.body;
+  body.classList.add("modal-open");
+  const dialog = document.getElementById("dialog--age-warning");
+  dialog.show();
+
+  const button = document.getElementById("dialog--proceed");
+  button.addEventListener("click", function(event) {
+    dialog.close();
+    body.classList.remove("modal-open");
+  });
+});
+</script>

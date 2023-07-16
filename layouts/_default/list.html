@@ -8,10 +8,10 @@
 
 {{/* printf "%t" .Params */}}
 
+<article>
 {{- .Content -}}
 
 <ul class="list">
-
   {{ range .Pages }}
   <li>
   <a href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
@@ -19,7 +19,6 @@
   {{- partial "meta.html" . -}}
   </li>
   {{- end -}}
-
 </ul>
-
+</article>
 {{ end }}

@@ -2,6 +2,11 @@
 <html lang="{{ .Site.LanguageCode }}">
 <head>
 {{ partial "head.html" . }}
+
+{{- if or (eq .Params.ratings.rating "mature") (eq .Params.ratings.rating "explicit") -}}
+  {{ partial "head-warning-modal.html" . }}
+{{- end -}}
+
 {{ partial "schema.html" . }}
 </head>
 
@@ -11,6 +16,10 @@
 <header>
 {{ partial "header.html" . }}
 </header>
+
+{{- if or (eq .Params.ratings.rating "mature") (eq .Params.ratings.rating "explicit") -}}
+  {{- partial "warning-modal.html" . -}}
+{{- end -}}
 
 {{- block "main" . -}}{{- end -}}
 
