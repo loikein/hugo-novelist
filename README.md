@@ -10,6 +10,7 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
 
 ![Theme screenshot](screenshot2.png)
 
+
 ## Fork notes
 
 ### TODO
@@ -43,26 +44,46 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
     + Support LaTeX
 - ...
 
-### Age warning modal
 
-Copyright acknowledgement:
+## Features
 
-```md
-This theme uses the adult caution message from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under GNU General Public License v2.0, no changes made. All rights reserved by the Organization for Transformative Works.
-```
+- Minimalistic, clean and simple design
+- Perfect for writers
+- Content focused
+- System fonts
+- Anchor links
+- ~~NO JS!~~ This is voided by the addition of age warning modals. Readers can still disable JS which skips the modal, but nothing else is affected.
+- ~~AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest~~ \(Untested\)
+- Responsive design
+- Tags and tag pages
+- ~~Inline CSS~~
+- Atom feed
+- Json feed
+- ~~Related content (internal links)~~
+- ~~Sass~~ SCSS
+- SEO optimized (Twitter cards, Facebook Open Graph, Schema.org)
 
-### Rating system
 
-Copyright acknowledgement: [`./exampleSite/content/rating-description.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/rating-description.md)
+## Site customisation
 
-```md
-This theme uses the symbol system from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under GNU General Public License v2.0, with the following changes:
+You can customise the favicon by creating a `favicon.png` file under `/site/static/`.
 
-- Removing the external work mark and the completion status unknown mark \(because presumably all the works that you post here are your originals, and you know whether they are completed or not\);
-- Enlarging the "Other relationships" icon to make it the same size with others.
+Customisation options in `config.yaml`:
 
-All rights reserved by the Organization for Transformative Works.
-```
+- `params.customCSS` bool: Turn on/off site-specific custom CSS. All `.css` files located under `/site/assets/css/` will be included. See the example site folder for an example (not turned-on).
+- `params.enableRatings` bool: Site-wide switch for turning on/off the AO3 rating system. Only controls the display. You can still save the ratings for your own reference purpose.
+- `params.description` string: The subtitle under your site title.
+- `params.dateFormat` string: Enter any format of the date `Monday, Jan 2, 2006` that is compatible with [Go's Time Format function](https://pkg.go.dev/time#example-Time.Format). See [Hugo documentation](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for a list of simple examples.
+- `params.showSummary` bool: Controls whether the article lists automatically show the beginning of the article (140 characters) or not.
+- `params.lowVisionSymbols` bool: Controls whether to use the low vision version of ratings symbols or not.
+- `params.hrGlyph` string: Glyph used for the `<hr>` element. The quotation marks are required. Also, if you want to use Unicode Characters, you must type an extra slash like this: `"\\2756"`.
+
+
+## Pages customisation
+
+In addition to the [usual markdown front matter](https://gohugo.io/content-management/front-matter/) \(note certain entries are not supported such as `categories` and `weight`\), you can also specify fandom, characters, tags, ratings and 1 external link.
+
+### Ratings
 
 For each writing \(for multi-chapters only the `_index` file counts\), you can choose from: \(Quotation marks are required. Can be single quote if you want.\)
 
@@ -88,7 +109,7 @@ For each writing \(for multi-chapters only the `_index` file counts\), you can c
     + `"no"`
     + `"yes"`
 
-YAML front matter example:
+YAML example:
 
 ```yaml
 ratings:
@@ -98,7 +119,7 @@ ratings:
   complete: "yes"
 ```
 
-TOML front matter example:
+TOML example:
 
 ```toml
 [ratings]
@@ -108,34 +129,26 @@ category = "femslash"
 complete = "no"
 ```
 
-## Features
 
-- Minimalistic, clean and simple design
-- Perfect for writers
-- Content focused
-- System fonts
-- Anchor links
-- ~~NO JS!~~ This is voided by the addition of age warning modals. Readers can still disable JS which skips the modal, but nothing else is affected.
-- ~~AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest~~ \(Untested\)
-- Responsive design
-- Tags and tag pages
-- ~~Inline CSS~~
-- Atom feed
-- Json feed
-- ~~Related content (internal links)~~
-- ~~Sass~~ SCSS
-- SEO optimized (Twitter cards, Facebook Open Graph, Schema.org)
+## Copyright acknowledgements
 
-## Site Customisation
+### Age warning modal
 
-You can customise the favicon by creating a `favicon.png` file under `/site/static/`.
+Copyright acknowledgement:
 
-Customisation options in `config.yaml`:
+```md
+This theme uses the adult caution message from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under GNU General Public License v2.0, no changes made. All rights reserved by the Organization for Transformative Works.
+```
 
-- `params.customCSS` bool: Turn on/off site-specific custom CSS. All `.css` files located under `/site/assets/css/` will be included. See the example site folder for an example (not turned-on).
-- `params.enableRatings` bool: Site-wide switch for turning on/off the AO3 rating system. Only controls the display. You can still save the ratings for your own reference purpose.
-- `params.description` string: The subtitle under your site title.
-- `params.dateFormat` string: Enter any format of the date `Monday, Jan 2, 2006` that is compatible with [Go's Time Format function](https://pkg.go.dev/time#example-Time.Format). See [Hugo documentation](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for a list of simple examples.
-- `params.showSummary` bool: Controls whether the article lists show the beginning of the article (140 words) or not.
-- `params.lowVisionSymbols` bool: Controls whether to use the low vision version of ratings symbols or not.
-- `params.hrGlyph` string: Glyph used for the `<hr>` element. The quotation marks are required. Also, if you want to use Unicode Characters, you must type an extra slash like this: `"\\2756"`.
+### Rating system
+
+Copyright acknowledgement: [`./exampleSite/content/rating-description.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/rating-description.md)
+
+```md
+This theme uses the symbol system from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under GNU General Public License v2.0, with the following changes:
+
+- Removing the external work mark and the completion status unknown mark \(because presumably all the works that you post here are your originals, and you know whether they are completed or not\);
+- Enlarging the "Other relationships" icon to make it the same size with others.
+
+All rights reserved by the Organization for Transformative Works.
+```
