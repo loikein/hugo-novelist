@@ -9,9 +9,8 @@
   {{ if $terms }}
     <span>—
     {{ range $key, $value := $terms }}
-      <a href="{{ .Permalink }}">
-        {{ partial "tag-sign.html" . }}{{ .Title }}{{ if ne $key (sub (len $terms) 1) }}, {{ end }}
-      </a>
+      <a href="{{ .Permalink }}">{{ partial "tag-sign.html" . }}{{ .Title }}</a>
+      {{- if ne $key (sub (len $terms) 1) -}},&#32;{{- end -}}
     {{ end }}
     </span>
   {{ end }}
@@ -26,10 +25,10 @@
 {{/* summary */}}
 <span>
   {{- if .Description -}}
-  {{- .Description -}}
+  {{- .Description | markdownify -}}
   {{- else -}}
   {{- if .Site.Params.showSummary -}}
-  {{- truncate 140 .Summary | plainify -}}
+  {{- truncate 140 .Summary | plainify | htmlUnescape | safeHTML -}}
   {{- end -}}
   {{- end -}}
 </span>

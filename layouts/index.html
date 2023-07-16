@@ -3,29 +3,31 @@
 {{- .Content -}}
 
 <p>Browse by:</p>
-<ul>
+<ul aria-label="Article categories">
   <li><a href="/fandoms/">Fandoms</a></li>
   <li><a href="/characters/">Characters</a></li>
   <li><a href="/tags/">Tags</a></li>
 </ul>
-<p>Or see everything:</p>
+<p>Or by sections:</p>
 
-<!-- <h2><a href="/writing/">Writing</a></h2> -->
-<h2>Writing</h2>
+{{/* "writing" */}}
 {{/*
   https://discourse.gohugo.io/t/how-to-select-both-pages-and-sections-on-the-same-level/17205/7
 */}}
 {{- $writings := slice -}}
 {{- range (where .Site.Pages "Section" "writing" ) -}}
-  {{ if eq (print .Parent) (print ($.Site.GetPage "writing")) }}
-    <!-- this means that the page is directly below software -->
-    <!-- therefore add the page to the $posts list -->
-    {{ $writings = $writings | append . }}
-  {{ end }}
+  {{- if eq (print .Parent) (print ($.Site.GetPage "writing")) -}}
+    {{/* this means that the page (or section) is directly below "writing" */}}
+    {{/* therefore add it to the $posts list */}}
+    {{- $writings = $writings | append . -}}
+  {{- end -}}
 {{- end -}}
+<h2><a href="/writing/">Writing ({{ $writings | len }})</a></h2>
+
+<p>Newest entries:</p>
 
 <ul class="list writing">
-  {{ range (sort $writings "Date" "desc") }}
+  {{- range first 5 (sort $writings "Date" "desc") -}}
   <li>
   <a href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
   {{- partial "ratings.html" . -}}
@@ -33,5 +35,6 @@
   </li>
   {{- end -}}
 </ul>
+{{/* end of "writing" */}}
 
-{{ end }}
+{{ end }}{{/* end of "main" */}}

@@ -15,34 +15,41 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
 
 ### TODO
 
-- Housekeeping
+- Hugo
     + [x] Clean up temp files
     + [x] Add `theme.toml`
     + [x] Clean up layout code
     + [x] Set up `exampleSite` \& deploy
     + [ ] Add i18n
-- Style tweaks
+    + [ ] Add series layout
+- Site features
+    + [x] Add rating system
+    + [x] Add multi-chapter support
+        * [x] Section permalink shenanigan
+    + [x] Taxonomies: fandoms, characters
+        * [ ] Add: relationships
+    + [x] Add age warning modal for M \& E rated writings
+    + [x] Add archive pages (achieved by restoring section lists)
+    + [ ] Add full-text search
+    + [ ] Support multi-line summary
+- Style
     + [x] Centre the main tag
     + [x] Adjust date format
-    + [x] Add rating system
     + [x] Custom `<hr>` glyph
-- New functionalities
-    + [x] Add multi-chapter support
-    + [x] More taxonomies \(fandoms, characters\)
-    + [x] Add age warning modal for M \& E rated writings
-    + [x] Add jump link to external sources (meta)
-    + [ ] Add prev page next page buttons (multi-chapter)
-    + [ ] Add archive pages
     + [ ] Dark mode
+    + [ ] Do something about multi-line summary style \(and all summary style\)
+- Layout
+    + [ ] Add prev/next page buttons (maybe only for multi-chapter)
+    + [ ] Add beginning notes and end notes
+- Meta tags
+    + [x] Add jump link to external sources
+- Others
     + [ ] Add jump to main button
     + [ ] Get the extra privacy version of the social shortcodes
-    + [ ] Add full-text search
-- Fix new bugs
-    + [ ] Section permalink shenanigan
 - Probably won't
+    + Add pagination
     + Do something about the code fence styling
     + Support LaTeX
-- ...
 
 
 ## Features
@@ -52,7 +59,7 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
 - Content focused
 - System fonts
 - Anchor links
-- ~~NO JS!~~ This is voided by the addition of age warning modals. Readers can still disable JS which skips the modal, but nothing else is affected.
+- ~~NO JS!~~ This is voided by the addition of age warning modals. Readers can still disable JS which skips the modal, but nothing else will be affected.
 - ~~AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest~~ \(Untested\)
 - Responsive design
 - Tags and tag pages
@@ -83,7 +90,7 @@ Customisation options in `config.yaml`:
 
 In addition to the [usual markdown front matter](https://gohugo.io/content-management/front-matter/) \(note certain entries are not supported such as `categories` and `weight`\), you can also specify fandom, characters, tags, ratings and 1 external link.
 
-### Ratings
+### `ratings`
 
 For each writing \(for multi-chapters only the `_index` file counts\), you can choose from: \(Quotation marks are required. Can be single quote if you want.\)
 

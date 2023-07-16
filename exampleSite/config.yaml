@@ -43,13 +43,13 @@ markup:
 
 permalinks:
   page:
-    writing: /:section/:year-:month-:day-:slug/
+    writing: /:sections/:slugorfilename/
   section:
-    writing: /:section/:year-:month-:day-:slug/
+    writing: /:sections/:slugorfilename/
 
 frontmatter:
   author: Example
-  github: "https://github.com/loikein"
+  github: "https://github.com/example"
   facebook: "https://facebook.com/example"
   og_image: 
   sitename: 

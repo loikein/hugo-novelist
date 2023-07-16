@@ -1,10 +1,16 @@
 {{ define "main" }}
 
-<h1>
-{{ .Title }}
-{{- partial "ratings.html" . -}}
-</h1>
-{{- partial "meta.html" . -}}
+{{- if .Params.date -}}
+  {{/* this is a multi-chapter article list page */}}
+  <h1>
+  {{ .Title }}
+  {{- partial "ratings.html" . -}}
+  </h1>
+  {{- partial "meta.html" . -}}
+{{- else -}}
+  {{/* this is an actual section list page */}}
+  <h1>{{ .Title }}</h1>
+{{- end -}}
 
 {{/* printf "%t" .Params */}}
 
@@ -15,7 +21,7 @@
 <article>
 {{- .Content -}}
 
-<ul class="list">
+<ul class="list {{ .Section }}">
   {{ range .Pages }}
   <li>
   <a href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
@@ -25,4 +31,5 @@
   {{- end -}}
 </ul>
 </article>
-{{ end }}
+
+{{ end }}{{/* end of "main" */}}

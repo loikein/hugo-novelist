@@ -3,6 +3,12 @@
   line-height: $line-height-base;
 }
 
+:focus {
+  outline: medium auto currentColor;
+  outline: medium auto invert;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 body {
   font-family: $font-sans-serif, $font-emoji;
   padding: $margin-2;
@@ -16,26 +22,23 @@ main {
 
 header,
 footer {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin: $margin-4 0;
 }
 
 header div.site-title {
   font-weight: bold;
 }
 
-.meta {
-  color: #777;
-  margin-bottom: $margin-2;
-
-  span a {
-    color: #777;
-    display: inline;
-    text-decoration: none;
-  }
-}
-
 a {
+  text-decoration: none;
+  padding: 0 0 1px 0;
+  border-bottom: 1px solid;
+
+  &:hover, &:focus, &:active {
+    padding-bottom: 0;
+    border-bottom: 2px solid;
+  }
+
   &, &:visited {
     color: initial
   }
@@ -47,7 +50,24 @@ a {
   }
 }
 
+.meta {
+  color: $color-text-faint;
+  margin-bottom: $margin-2;
+
+  span a {
+    color: $color-text-faint;
+    display: inline;
+    text-decoration: none;
+    padding: 0;
+    border-bottom: 1px dotted;
+
+    &:hover, &:focus, &:active {
+      border-bottom: 1px solid;
+    }
+  }
+}
+
 time {
-  color: #777;
+  color: $color-text-faint;
   font-variant-numeric: tabular-nums;
 }

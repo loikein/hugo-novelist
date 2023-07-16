@@ -1,2 +1,6 @@
+{{ if .IsHome }}
+<h1 class="site-title">{{ .Site.Title }}</h1>
+{{ else }}
 <div class="site-title"><a href="/">{{ .Site.Title }}</a></div>
+{{ end }}
 <span>{{ .Site.Params.description }}</span>

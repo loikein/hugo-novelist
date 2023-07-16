@@ -2,9 +2,8 @@
 author: Hugo Authors
 title: Multi-chapter test article
 date: "2019-01-30"
-# description: >-
-#   Sample article showcasing basic Markdown syntax and formatting for HTML
-#   elements.
+description: >
+  I am a short summary. ~~And me.~~
 tags:
   - markdown
 ratings:

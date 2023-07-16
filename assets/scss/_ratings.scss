@@ -4,7 +4,7 @@ $rating-size: 2 * ($rating-width + $rating-gap);
 $rating-top-shift: 1px;
 $rating-right-shift: 10px;
 
-.list li,
+.list>li,
 h1 {
   position: relative;
 }
@@ -52,7 +52,7 @@ ul.required-tags {
     margin-left: $rating-size + $rating-right-shift;
   }
 
-  .writing h1:has(.required-tags) {
+  .writing>h1:has(.required-tags) {
     &,+ .meta {
       // padding does not work here
       margin-left: $rating-size + $rating-right-shift;
