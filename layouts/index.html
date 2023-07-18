@@ -18,11 +18,11 @@ https://gohugo.io/functions/scratch/
 {{- end -}}
 
 {{- $order := slice "fandoms" "characters" "tags" -}}{{/* add new taxonomies here */}}
-{{ range $index, $term := $order }}
-  <li><a href="/{{ $term }}/">{{ partial "tag-sign.html" (dict "context" . "Type" $term) }}{{ $term | title }}(
+{{ range $index, $taxonomy := $order }}
+  <li><a href="/{{ $taxonomy | urlize}}/">{{ partial "tag-sign.html" (dict "context" . "Type" $taxonomy) }}{{ $taxonomy | title }}(
 
   {{- range $key, $value := $scratch.Get "termsCount" -}}
-    {{- if eq $term $key -}}
+    {{- if eq $taxonomy $key -}}
       {{- print $value -}}
     {{- end -}}
   {{- end -}}
