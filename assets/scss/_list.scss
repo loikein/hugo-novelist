@@ -10,6 +10,12 @@
   margin: $margin-2 0;
 
   li {
-    margin-bottom: 1rem;
+    margin-bottom: $margin-1;
+  }
+}
+
+ul:not(.list) {
+  li {
+    margin-bottom: $margin-04;
   }
 }

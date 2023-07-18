@@ -6,7 +6,7 @@
 {{ partial "tag-sign.html" . }}{{ .Type | title }}
 </h1>
 
-<ul class="list">
+<ul>
   {{ range .Data.Terms.Alphabetical }}
   <li>
     <a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a>
