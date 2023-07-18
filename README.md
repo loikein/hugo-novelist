@@ -21,13 +21,14 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
     + [x] Clean up layout code
     + [x] Set up `exampleSite` \& deploy
     + [ ] Add i18n
-    + [ ] Add series layout
+    + [ ] Better archetypes
 - Site features
     + [x] Add rating system
+        * [ ] Fix rating focus style
     + [x] Add multi-chapter support
         * [x] Section permalink shenanigan
     + [x] Taxonomies: fandoms, characters
-        * [ ] Add: relationships
+        * [ ] Add: relationships \(Symbol: ⋈? ⇋? §? //? ⊗? ⎈? ⌀? ⚭?\)
     + [x] Add age warning modal for M \& E rated writings
     + [x] Add archive pages (achieved by restoring section lists)
     + [ ] Add full-text search
@@ -39,6 +40,7 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
     + [ ] Dark mode
     + [ ] Do something about multi-line summary style \(and all summary style\)
 - Layout
+    + [ ] Add series layout
     + [ ] Add prev/next page buttons (maybe only for multi-chapter)
     + [ ] Add beginning notes and end notes
 - Meta tags

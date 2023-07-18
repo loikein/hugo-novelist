@@ -4,12 +4,33 @@
 
 <p>Browse by:</p>
 <ul aria-label="Article categories">
-  <li><a href="/fandoms/">Fandoms</a></li>
-  <li><a href="/characters/">Characters</a></li>
-  <li><a href="/tags/">Tags</a></li>
-</ul>
-<p>Or by sections:</p>
+{{/* List all taxonomies, symbol, count of terms; with custom order (the whole point of this) */}}
+{{/*
+https://gohugo.io/variables/taxonomy/
+https://flaviocopes.com/hugo-partial-multiple-parameters/
+https://www.regisphilibert.com/blog/2017/04/hugo-scratch-explained-variable/
+https://gohugo.io/functions/scratch/
+*/}}
 
+{{- $scratch := newScratch -}}
+{{- range $k,$v := .Site.Taxonomies -}}
+  {{- $scratch.SetInMap "termsCount" $k ($v | len) -}}
+{{- end -}}
+
+{{- $order := slice "fandoms" "characters" "tags" -}}{{/* add new taxonomies here */}}
+{{ range $index, $term := $order }}
+  <li><a href="/{{ $term }}/">{{ partial "tag-sign.html" (dict "context" . "Type" $term) }}{{ $term | title }}(
+
+  {{- range $key, $value := $scratch.Get "termsCount" -}}
+    {{- if eq $term $key -}}
+      {{- print $value -}}
+    {{- end -}}
+  {{- end -}}
+)</a></li>
+{{ end }}
+</ul>
+
+<p>Or by sections:</p>
 {{/* "writing" */}}
 {{/*
   https://discourse.gohugo.io/t/how-to-select-both-pages-and-sections-on-the-same-level/17205/7
