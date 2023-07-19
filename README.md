@@ -139,25 +139,28 @@ complete = "no"
 ```
 
 
-## Copyright acknowledgements
+## License/copyright acknowledgements
+
+### Upstream codebase
+
+This theme was originally authored by Ronalds Vilciņš and distributed under the MIT License \([ronv/simplist: Content focused, minimal theme for Hugo](https://github.com/ronv/simplist)\).
+
+
+### This repo
+
+This repository is distributed under the GNU General Public License v2.0 only.
+
 
 ### Age warning modal
 
-Copyright acknowledgement:
+This theme uses the adult caution message from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under the GNU General Public License v2.0 only, no changes made.
 
-```md
-This theme uses the adult caution message from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under GNU General Public License v2.0, no changes made. All rights reserved by the Organization for Transformative Works.
-```
 
 ### Rating system
 
-Copyright acknowledgement: [`./exampleSite/content/rating-description.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/rating-description.md)
+[`./exampleSite/content/rating-description.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/rating-description.md):
 
-```md
-This theme uses the symbol system from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under GNU General Public License v2.0, with the following changes:
+This theme uses the symbol system from the [otwarchive repository](https://github.com/otwcode/otwarchive/) under the GNU General Public License v2.0, with the following changes:
 
 - Removing the external work mark and the completion status unknown mark \(because presumably all the works that you post here are your originals, and you know whether they are completed or not\);
 - Enlarging the "Other relationships" icon to make it the same size with others.
-
-All rights reserved by the Organization for Transformative Works.
-```
