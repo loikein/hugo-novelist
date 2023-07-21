@@ -10,6 +10,42 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
 
 ![Theme screenshot](screenshot2.png)
 
+## Building guides
+
+### Local
+
+Build your own site: (path: `/your-site/`)
+
+```sh
+hugo server --buildDrafts --disableFastRender
+```
+
+Build the example site: (path: `/hugo-novelist/`)
+
+```sh
+cd exampleSite
+hugo serve --buildDrafts --disableFastRender --themesDir .. --theme .
+```
+
+### Netlify
+
+Example `netlify.toml`:
+
+Build your own site: (from your own site repo)
+
+```toml
+[build]
+publish = "public"
+command = "hugo --gc --minify"
+
+[context.production.environment]
+HUGO_VERSION = "0.115.2"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+```
+
+Build the example site: (from this repo) see [`./netlify.toml`](https://github.com/loikein/hugo-novelist/blob/main/netlify.toml)
+
 
 ## Fork notes
 
@@ -45,7 +81,7 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
 - Meta tags
     + [x] Add jump link to external sources
 - Others
-    + [ ] Add jump to main button
+    + [ ] (a11y) Add jump to main button
     + [ ] Get the extra privacy version of the social shortcodes
 - Probably won't
     + Add pagination
@@ -89,7 +125,9 @@ Customisation options in `config.yaml`:
 
 ## Pages customisation
 
-In addition to the [usual markdown front matter](https://gohugo.io/content-management/front-matter/) \(note certain entries are not supported such as `categories` and `weight`\), you can also specify fandom, characters, tags, ratings and 1 external link.
+In addition to the [usual markdown front matter](https://gohugo.io/content-management/front-matter/) \(note certain entries are not supported such as `categories` and `weight`\), you can also specify fandoms, relationships, characters, tags, ratings and 1 external link.
+
+For an all-in-one example, see [`./exampleSite/content/writing/markdown-syntax.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/writing/markdown-syntax.md).
 
 ### `ratings`
 

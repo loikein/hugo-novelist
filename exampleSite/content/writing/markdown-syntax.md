@@ -5,12 +5,15 @@ date: '2019-03-11'
 # description: >-
 #   Sample article showcasing basic Markdown syntax and formatting for HTML
 #   elements.
-fandoms: "Greatest TV Show"
+fandoms:
+  - "Greatest TV Show"
+  - "Greatest Film"
 relationships:
   - "A (Greatest TV Show)/B (Greatest TV Show)"
 characters:
   - "A (Greatest TV Show)"
   - "B (Greatest TV Show)"
+  - "C (Greatest Film)"
 tags:
   - Testing
   - css

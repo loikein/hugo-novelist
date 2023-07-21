@@ -5,7 +5,8 @@ date: '2023-07-16'
 # description: >-
 #   Sample article showcasing basic Markdown syntax and formatting for HTML
 #   elements.
-fandoms: "Greatest TV Show"
+fandoms:
+  - "Greatest TV Show"
 characters:
   - "A (Greatest TV Show)"
 tags:
