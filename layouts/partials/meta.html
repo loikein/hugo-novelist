@@ -3,7 +3,7 @@
 <time>{{ .Date.Format (.Site.Params.dateFormat | default "01·02·2006" ) }}</time>
 
 {{/* tags */}}
-{{ $categories := slice "fandoms" "characters" "tags" }}
+{{ $categories := slice "fandoms" "relationships" "characters" "tags" }}
 {{ range $k, $v := $categories }}
   {{ $terms := ( $.Page.GetTerms $v ) }}
   {{ if $terms }}

@@ -12,18 +12,13 @@ https://www.regisphilibert.com/blog/2017/04/hugo-scratch-explained-variable/
 https://gohugo.io/functions/scratch/
 */}}
 
-{{- $scratch := newScratch -}}
-{{- range $k,$v := .Site.Taxonomies -}}
-  {{- $scratch.SetInMap "termsCount" $k ($v | len) -}}
-{{- end -}}
-
-{{- $order := slice "fandoms" "characters" "tags" -}}{{/* add new taxonomies here */}}
+{{- $order := slice "fandoms" "relationships" "characters" "tags" -}}{{/* add new taxonomies here */}}
 {{ range $index, $taxonomy := $order }}
-  <li><a href="/{{ $taxonomy | urlize}}/">{{ partial "tag-sign.html" (dict "context" . "Type" $taxonomy) }}{{ $taxonomy | title }}(
+  <li><a href="/{{ $taxonomy | urlize}}/">{{ partial "tag-sign.html" (dict "context" . "Type" $taxonomy) }}{{ $taxonomy | title }}&#32;(
 
-  {{- range $key, $value := $scratch.Get "termsCount" -}}
+  {{- range $key, $value := $.Site.Taxonomies -}}{{/* use $ for global context */}}
     {{- if eq $taxonomy $key -}}
-      {{- print $value -}}
+      {{- print (len $value) -}}
     {{- end -}}
   {{- end -}}
 )</a></li>

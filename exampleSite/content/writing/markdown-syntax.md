@@ -6,6 +6,8 @@ date: '2019-03-11'
 #   Sample article showcasing basic Markdown syntax and formatting for HTML
 #   elements.
 fandoms: "Greatest TV Show"
+relationships:
+  - "A (Greatest TV Show)/B (Greatest TV Show)"
 characters:
   - "A (Greatest TV Show)"
   - "B (Greatest TV Show)"

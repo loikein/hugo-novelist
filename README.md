@@ -27,8 +27,7 @@ Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
         * [ ] Fix rating focus style
     + [x] Add multi-chapter support
         * [x] Section permalink shenanigan
-    + [x] Taxonomies: fandoms, characters
-        * [ ] Add: relationships \(Symbol: ⋈? ⇋? §? //? ⊗? ⎈? ⌀? ⚭?\)
+    + [x] Taxonomies: fandoms, relationships, characters
     + [x] Add age warning modal for M \& E rated writings
     + [x] Add archive pages (achieved by restoring section lists)
     + [ ] Add full-text search

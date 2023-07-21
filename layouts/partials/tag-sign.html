@@ -1,5 +1,6 @@
-{{- if eq .Type "tags" -}}&num;
+{{- if eq .Type "tags" -}}&#x0023;
 {{- else if eq .Type "fandoms" -}}&#x2318;
-{{- else if eq .Type "characters" -}}&commat;
-{{- else -}}&#8253;
+{{- else if eq .Type "characters" -}}&#x0040;
+{{- else if eq .Type "relationships" -}}&#x2295;
+{{- else -}}&#x203D;
 {{- end -}}
