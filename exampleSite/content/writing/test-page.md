@@ -66,7 +66,7 @@ Inline `code`, `` `escape` ``, and <kbd>keystroke</kbd>
 
 Inline `code`, `` `escape` ``, and <kbd>keystroke</kbd>
 
-This theme does not support code blocks yet.
+This theme has limited support for code blocks.
 
 ```go {hl_lines=["2-5"],linenostart=199}
 package main

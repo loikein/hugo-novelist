@@ -19,3 +19,7 @@ a.external-link::before {
   display: inline-block;
   transform: scaleX(-1);
 }
+
+.meta__item p {
+  margin: 0;
+}

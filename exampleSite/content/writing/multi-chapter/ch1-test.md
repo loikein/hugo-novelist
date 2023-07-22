@@ -5,7 +5,5 @@ date: '2023-07-13'
 # description: >-
 #   Sample article showcasing basic Markdown syntax and formatting for HTML
 #   elements.
-tags:
-  - markdown
 ---
 The first chapter. 字数测试。

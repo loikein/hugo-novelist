@@ -1,0 +1,10 @@
+.notes {
+  border-left: none;
+  border-top: 1px solid $color-text;
+  border-bottom: 1px solid $color-text;
+  margin: $margin-2 $margin-2;
+
+  h3 {
+    margin: $margin-1 0;
+  }
+}

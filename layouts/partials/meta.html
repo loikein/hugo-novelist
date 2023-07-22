@@ -27,12 +27,15 @@
 {{- if not .IsPage -}}
 <span>&#32;—&#32;</span>{{- /**/ -}}
 <span class="meta__item">
-{{ $scratch.Get "chapterCount" | lang.NumFmt 0 }}&#32;/&#32;
-{{ if .Params.chapterPlan }}{{ .Params.chapterPlan }}{{ else }}?{{ end }} chapters
+{{ $scratch.Get "chapterCount" | lang.NumFmt 0 }}&#x002F;
+{{- if .Params.chapterPlan -}}{{- .Params.chapterPlan -}}{{- else -}}&#x003F;{{- end -}}&#32;chapters
 </span>
 {{- end -}}
 
+
+{{- if .Params.fandoms | or .Params.tags | or .Params.external -}}
 <br />
+{{- end -}}
 
 
 {{/* tags */}}
@@ -58,17 +61,14 @@
 <span>&#32;—&#32;</span>{{- /**/ -}}
 <a class="meta__item external-link" href="{{ .Params.external.link }}">{{ .Params.external.title }}</a>
 {{- end -}}
-<br />
 
 
 {{/* summary */}}
 <span class="meta__item">
   {{- if .Description -}}
-    {{- .Description | markdownify -}}
-  {{- else -}}
-    {{- if .Site.Params.showSummary -}}
-    {{- truncate 140 .Summary | plainify | htmlUnescape | safeHTML -}}
-    {{- end -}}
+    {{- .Description | .Page.RenderString (dict "display" "block") -}}
+  {{- else if .Site.Params.showSummary -}}
+    {{- truncate 140 .Summary | plainify | htmlUnescape | safeHTML | .Page.RenderString (dict "display" "block") -}}
   {{- end -}}
 </span>
 </div>

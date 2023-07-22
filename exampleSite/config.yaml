@@ -10,8 +10,6 @@ googleAnalytics: ""
 disqusShortname: ""
 footnotereturnlinkcontents: "↩"
 pluralizeListTitles: false
-pygmentsCodeFences: false
-pygmentsUseClasses: false
 paginate: 9999
 
 params:
@@ -36,6 +34,11 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    guessSyntax: true
+    lineNos: false
+    lineNumbersInTable: true
+    style: algol
 
 permalinks:
   page:

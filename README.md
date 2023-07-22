@@ -24,7 +24,7 @@ Build the example site: (path: `/hugo-novelist/`)
 
 ```sh
 cd exampleSite
-hugo serve --buildDrafts --disableFastRender --themesDir .. --theme .
+hugo server --buildDrafts --disableFastRender --themesDir .. --theme .
 ```
 
 ### Netlify
@@ -71,12 +71,13 @@ Build the example site: (from this repo) see [`./netlify.toml`](https://github.c
     + [x] Centre the main tag
     + [x] Adjust date format
     + [x] Custom `<hr>` glyph
+    + [x] Do something about the code fence styling \(only with config\)
     + [ ] Dark mode
     + [ ] Do something about multi-line summary style \(and all summary style\)
 - Layout
     + [ ] Add series layout
     + [ ] Add prev/next page buttons (maybe only for multi-chapter)
-    + [ ] Add beginning notes and end notes
+    + [x] Add beginning notes and end notes
 - Meta tags
     + [x] Add jump link to external sources
 - Others
@@ -84,7 +85,6 @@ Build the example site: (from this repo) see [`./netlify.toml`](https://github.c
     + [ ] Get the extra privacy version of the social shortcodes
 - Probably won't
     + Add pagination
-    + Do something about the code fence styling
     + Support LaTeX
 
 
@@ -128,8 +128,28 @@ In addition to the [usual markdown front matter](https://gohugo.io/content-manag
 
 For an all-in-one example, see [`./exampleSite/content/writing/markdown-syntax.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/writing/markdown-syntax.md).
 
+### Notes
 
-### Multi-chapter pages
+You can add notes anywhere in your article by typing
+
+```go-html-template
+{{< notes >}}
+… (Your notes here. Use Markdown.)
+{{< /notes >}}
+```
+
+You can also get a custom title by typing
+
+```go-html-template
+{{< notes "Custom message:" >}}
+… (Your notes here. Use Markdown.)
+{{< /notes >}}
+```
+
+See [`./exampleSite/content/writing/markdown-syntax.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/writing/markdown-syntax.md) for examples of both cases.
+
+
+### Multi-chapter article
 
 See `./exampleSite/content/writing/multi-chapter/` for a brief example.
 
