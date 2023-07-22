@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/87c7da96-8f24-4277-bb4d-6202b039ebdc/deploy-status)](https://app.netlify.com/sites/hugo-novelist/deploys)
 
-Novelist is content focused, minimal theme for Hugo, suitable for fanfiction writings. It aims at a feature set similar to [Archive of Our Own](https://archiveofourown.org/).
+Novelist is content focused, minimal theme for Hugo, suitable for fanfiction writings. It aims at a feature set similar to [Archive of Our Own](https://archiveofourown.org/). **Not production-ready yet.**
 
 Demo: [https://hugo-novelist.netlify.app/](https://hugo-novelist.netlify.app/)
 
@@ -185,7 +185,7 @@ This theme was originally authored by Ronalds Vilciņš and distributed under th
 
 ### This repo
 
-This repository is distributed under the GNU General Public License v2.0 only.
+This repository is distributed under the GNU General Public License v2.0 or any later version \([per compatibility matrix of GNU licenses](https://www.gnu.org/licenses/gpl-faq.en.html#AllCompatibility)\).
 
 
 ### Age warning modal

@@ -2,13 +2,13 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "hugo-novelist"
-license = "MIT"
+license = "GPL-2.0-or-later"
 licenselink = "https://github.com/loikein/hugo-novelist/blob/main/LICENSE"
 description = "Hugo theme for fanfiction writing"
 homepage = "https://github.com/loikein/hugo-novelist"
-demosite = ""
-tags = []
-features = ["responsive", "clean", "minimal", "mobile", "disqus"]
+demosite = "https://hugo-novelist.netlify.app/"
+tags = ["clean", "minimal"]
+features = ["responsive", "mobile"]
 min_version = "0.115.0"
 
 [author]
