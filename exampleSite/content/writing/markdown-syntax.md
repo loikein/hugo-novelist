@@ -9,7 +9,7 @@ fandoms:
   - "Greatest TV Show"
   - "Greatest Film"
 relationships:
-  - "A (Greatest TV Show)/B (Greatest TV Show)"
+  - "A/B (Greatest TV Show)"
 characters:
   - "A (Greatest TV Show)"
   - "B (Greatest TV Show)"
@@ -21,7 +21,6 @@ tags:
   - themes
   - more
   - tags
-  - more!!!
 ratings:
   rating: "general-audience"
   warning: "choosenotto"

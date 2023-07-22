@@ -1,0 +1,21 @@
+.meta {
+  color: $color-text-faint;
+  margin-bottom: $margin-2;
+}
+
+a.meta__item {
+  color: $color-text-faint;
+  text-decoration: none;
+  padding-bottom: 0;
+  border-bottom: 1px dotted;
+
+  &:hover, &:focus, &:active {
+    border-bottom: 1px solid;
+  }
+}
+
+a.external-link::before {
+  content: "\00238B";
+  display: inline-block;
+  transform: scaleX(-1);
+}

@@ -42,29 +42,6 @@ a {
   &, &:visited {
     color: initial
   }
-
-  &.external-link::before {
-    content: "\00238B";
-    display: inline-block;
-    transform: scaleX(-1);
-  }
-}
-
-.meta {
-  color: $color-text-faint;
-  margin-bottom: $margin-2;
-
-  span a {
-    color: $color-text-faint;
-    display: inline;
-    text-decoration: none;
-    padding: 0;
-    border-bottom: 1px dotted;
-
-    &:hover, &:focus, &:active {
-      border-bottom: 1px solid;
-    }
-  }
 }
 
 time {

@@ -11,5 +11,8 @@ ratings:
   warning: "choosenotto"
   category: "multi"
   complete: "no"
+chapterPlan: 5
+cascade:
+  - language: "zh-Hans"
 ---
 Things. Notes.

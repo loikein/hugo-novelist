@@ -1,35 +1,74 @@
 <div class="meta" aria-label="Article meta">
-{{/* time */}}
-<time>{{ .Date.Format (.Site.Params.dateFormat | default "01·02·2006" ) }}</time>
+{{/* meta meta */}}
+<time class="meta__item">{{ .Date.Format (.Site.Params.dateFormat | default "01·02·2006" ) }}</time>{{- /**/ -}}
+<span>&#32;—&#32;</span>{{- /**/ -}}
+<span>Language: {{ default .Site.LanguageCode .Params.Language }}</span>
+<span>&#32;—&#32;</span>{{- /**/ -}}
+
+{{/* word count */}}
+
+{{- $scratch := newScratch -}}
+{{- if not .IsPage -}}{{/* if is a multi-chapter title page */}}
+  {{- range .Page.Pages -}}{{/* no need for .RegularPagesRecursive yet */}}
+    {{- $scratch.Add "allWordCount" .WordCount -}}
+    {{- $scratch.Add "chapterCount" 1 -}}
+  {{- end -}}
+{{- end -}}
+
+<span class="meta__item">
+{{- if .IsPage -}}{{/* is a single-chapter */}}
+  {{ .WordCount }} word(s)
+{{- else -}}
+  {{ $scratch.Get "allWordCount" | lang.NumFmt 0 }} word(s)
+{{- end -}}
+</span>
+
+{{/* chapter count */}}
+{{- if not .IsPage -}}
+<span>&#32;—&#32;</span>{{- /**/ -}}
+<span class="meta__item">
+{{ $scratch.Get "chapterCount" | lang.NumFmt 0 }}&#32;/&#32;
+{{ if .Params.chapterPlan }}{{ .Params.chapterPlan }}{{ else }}?{{ end }} chapters
+</span>
+{{- end -}}
+
+<br />
+
 
 {{/* tags */}}
-{{ $categories := slice "fandoms" "relationships" "characters" "tags" }}
-{{ range $k, $v := $categories }}
-  {{ $terms := ( $.Page.GetTerms $v ) }}
-  {{ if $terms }}
-    <span>—
-    {{ range $key, $value := $terms }}
-      <a href="{{ .Permalink }}">{{ partial "tag-sign.html" . }}{{ .Title }}</a>
-      {{- if ne $key (sub (len $terms) 1) -}},&#32;{{- end -}}
-    {{ end }}
-    </span>
-  {{ end }}
-{{ end }}
+{{- $categories := slice "fandoms" "relationships" "characters" "tags" -}}
+{{ range $k, $v := $categories -}}
+
+  {{- with $terms := ( $.Page.GetTerms $v ) -}}
+
+    {{- range $key, $value := $terms -}}
+      {{- if $key -}},&#32;{{- end -}}
+      <a class="meta__item" href="{{ .Permalink }}">{{ partial "tag-sign.html" . }}{{ .Title }}</a>
+    {{- end -}}
+
+    {{/* if $k span does not work because $k is never empty */}}
+    {{- if and ( $terms ) ( ne $v "tags" ) -}}<span>&#32;—&#32;</span>{{- end -}}
+
+  {{- end -}}
+{{ end -}}
+
 
 {{/* external link */}}
-{{ if .Params.external }}
-<span>— <a class="external-link" href="{{ .Params.external.link }}">{{ .Params.external.title }}</a></span>
-{{ end }}
-<br>
+{{- if .Params.external -}}
+<span>&#32;—&#32;</span>{{- /**/ -}}
+<a class="meta__item external-link" href="{{ .Params.external.link }}">{{ .Params.external.title }}</a>
+{{- end -}}
+<br />
+
 
 {{/* summary */}}
-<span>
+<span class="meta__item">
   {{- if .Description -}}
-  {{- .Description | markdownify -}}
+    {{- .Description | markdownify -}}
   {{- else -}}
-  {{- if .Site.Params.showSummary -}}
-  {{- truncate 140 .Summary | plainify | htmlUnescape | safeHTML -}}
-  {{- end -}}
+    {{- if .Site.Params.showSummary -}}
+    {{- truncate 140 .Summary | plainify | htmlUnescape | safeHTML -}}
+    {{- end -}}
   {{- end -}}
 </span>
 </div>

@@ -1,11 +1,10 @@
-baseurl: "https://hugo-novelist.netlify.app/"
-languageCode: "en-US"
 title: "Mary Sue"
-# uncomment when you use this theme for production:
+baseurl: "https://hugo-novelist.netlify.app/"
+# uncomment the following line when you use this theme for production:
 # theme: hugo-novelist
-# building locally:
-# hugo serve --buildDrafts --disableFastRender --themesDir .. --theme .
 canonifyurls: true
+languageCode: "en-US"
+hasCJKLanguage: true
 
 googleAnalytics: ""
 disqusShortname: ""
@@ -14,10 +13,6 @@ pluralizeListTitles: false
 pygmentsCodeFences: false
 pygmentsUseClasses: false
 paginate: 9999
-# disableKinds:
-#   - section
-#   - categories
-#   - tags
 
 params:
   description: "Since 1973"
@@ -26,7 +21,7 @@ params:
   enableRatings: true
   # Glyph used for <hr>
   # Some suggestions: section sign ("§"), asterism ("⁂"), pilcrow ("❡"), fleuron ("❧")
-  # If you want to use Unicode Characters, type double slash like this: "\\12199"
+  # If you want to use Unicode Characters, type double slash like this: "\\2756"
   hrGlyph: "❧"
   lowVisionSymbols: false
   showSummary: false

@@ -56,18 +56,17 @@ Build the example site: (from this repo) see [`./netlify.toml`](https://github.c
     + [x] Add `theme.toml`
     + [x] Clean up layout code
     + [x] Set up `exampleSite` \& deploy
-    + [ ] Add i18n
+    + [ ] Add i18n \(WIP\)
     + [ ] Better archetypes
 - Site features
     + [x] Add rating system
         * [ ] Fix rating focus style
     + [x] Add multi-chapter support
         * [x] Section permalink shenanigan
-    + [x] Taxonomies: fandoms, relationships, characters
+    + [x] Taxonomies: fandoms, relationships, characters, tags
     + [x] Add age warning modal for M \& E rated writings
     + [x] Add archive pages (achieved by restoring section lists)
     + [ ] Add full-text search
-    + [ ] Support multi-line summary
 - Style
     + [x] Centre the main tag
     + [x] Adjust date format
@@ -128,6 +127,18 @@ Customisation options in `config.yaml`:
 In addition to the [usual markdown front matter](https://gohugo.io/content-management/front-matter/) \(note certain entries are not supported such as `categories` and `weight`\), you can also specify fandoms, relationships, characters, tags, ratings and 1 external link.
 
 For an all-in-one example, see [`./exampleSite/content/writing/markdown-syntax.md`](https://github.com/loikein/hugo-novelist/blob/main/exampleSite/content/writing/markdown-syntax.md).
+
+
+### Multi-chapter pages
+
+See `./exampleSite/content/writing/multi-chapter/` for a brief example.
+
+In `_index.md` you can set the following parameters in addition to the pages parameters above:
+
+- `chapterPlan` int: Planned number of total chapters.
+- `cascade.language` [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)
+language code: Language setting for all chapters.
+
 
 ### `ratings`
 
