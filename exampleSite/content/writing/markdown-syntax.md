@@ -31,7 +31,7 @@ external:
   link: "#"
 ---
 {{< notes >}}
-Beginning notes. We _**really**_ like notes.
+Opening notes. We _**really**_ like notes.
 {{< /notes >}}
 <!--more-->
 
