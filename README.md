@@ -71,7 +71,7 @@ Build the example site: (from this repo) see [`./netlify.toml`](https://github.c
     + [ ] Dark mode
     + [ ] Do something about multi-line summary style \(and all summary style\)
 - Layout
-    + [ ] Add series layout
+    + [ ] Add series layout (with `series_weight`, see [Taxonomy templates](https://gohugo.io/templates/taxonomy-templates/#assign-weight))
     + [ ] Add prev/next page buttons (maybe only for multi-chapter)
     + [x] Add beginning notes and end notes
 - Meta tags
@@ -79,6 +79,7 @@ Build the example site: (from this repo) see [`./netlify.toml`](https://github.c
 - Others
     + [ ] (a11y) Add jump to main button
     + [ ] Get the extra privacy version of the social shortcodes
+    - [ ] Optimise for exporting to AO3? \([otwarchive/app/models/story_parser.rb#L586](https://github.com/otwcode/otwarchive/blob/master/app/models/story_parser.rb#L586)\)
 - Probably won't
     + Add pagination
     + Support LaTeX
@@ -110,12 +111,12 @@ You can customise the favicon by creating a `favicon.png` file under `/site/stat
 Customisation options in `config.yaml`:
 
 - `params.customCSS` bool: Turn on/off site-specific custom CSS. All `.css` files located under `/site/assets/css/` will be included. See the example site folder for an example (not turned-on).
-- `params.enableRatings` bool: Site-wide switch for turning on/off the AO3 rating system. Only controls the display. You can still save the ratings for your own reference purpose.
+- `params.enableRatings` bool: Site-wide switch for turning on/off the AO3 rating system. Only controls the display. You can still save the ratings for your own reference.
 - `params.description` string: The subtitle under your site title.
 - `params.dateFormat` string: Enter any format of the date `Monday, Jan 2, 2006` that is compatible with [Go's Time Format function](https://pkg.go.dev/time#example-Time.Format). See [Hugo documentation](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for a list of simple examples.
 - `params.showSummary` bool: Controls whether the article lists automatically show the beginning of the article (140 characters) or not.
 - `params.lowVisionSymbols` bool: Controls whether to use the low vision version of ratings symbols or not.
-- `params.hrGlyph` string: Glyph used for the `<hr>` element. The quotation marks are required. Also, if you want to use Unicode Characters, you must type an extra slash like this: `"\\2756"`.
+- `params.hrGlyph` string: Glyph used for the `<hr>` element to be passed to the CSS. The quotation marks are required. Also, if you want to use Unicode Characters, you must type an extra slash like this: `"\\2756"`.
 
 
 ## Pages customisation
