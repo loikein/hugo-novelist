@@ -72,7 +72,7 @@ Build the example site: (from this repo) see [`./netlify.toml`](https://github.c
     + [ ] Do something about multi-line summary style \(and all summary style\)
 - Layout
     + [ ] Add series layout (with `series_weight`, see [Taxonomy templates](https://gohugo.io/templates/taxonomy-templates/#assign-weight))
-    + [ ] Add prev/next page buttons (maybe only for multi-chapter)
+    + [ ] Add prev/next page buttons \(done, need styling\)
     + [x] Add beginning notes and end notes
 - Meta tags
     + [x] Add jump link to external sources

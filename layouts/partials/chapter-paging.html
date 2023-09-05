@@ -1,0 +1,46 @@
+{{/* https://discourse.gohugo.io/t/exclude-pages-by-type-from-nextinsection/23259/5 */}}
+{{/* https://discourse.gohugo.io/t/list-pages-which-share-the-same-parent/32569/2 */}}
+
+<div class="chapters__nav">
+
+{{- if eq .CurrentSection .FirstSection -}}
+{{/* this is a normal writing */}}
+<span class="chapters--previous">
+  {{ with .NextInSection }}
+  {{/* ordered by default (Weight > Date > LinkTitle > FilePath) */}}
+  <a class="link-reverse" href="{{ .Permalink }}">« Newer writing</a>
+  {{ end }}
+</span>
+
+{{- else -}}
+{{/* this is a chapter inside a multi-chapter writing */}}
+<span class="chapters--previous">
+  {{ with .CurrentSection.RegularPages.ByTitle.Next . }}
+  {{/* ordered by title (alphabetically) */}}
+  {{/* https://gohugo.io/templates/lists/#order-content */}}
+  <a class="link-reverse" href="{{ .Permalink }}">« Previous chapter</a>
+  {{ end }}
+</span>
+
+{{- end -}}
+
+<span class="chapters--back">
+  <a class="link-reverse" href="{{ .CurrentSection.Permalink }}">Back to list</a>
+</span>
+
+{{- if eq .CurrentSection .FirstSection -}}
+<span class="chapters--next">
+  {{ with .PrevInSection }}
+  <a class="link-reverse" href="{{ .Permalink }}">Older writing »</a>
+  {{ end }}
+</span>
+
+{{- else -}}
+<span class="chapters--next">
+  {{ with .CurrentSection.RegularPages.ByTitle.Prev . }}
+  <a class="link-reverse" href="{{ .Permalink }}">Next chapter »</a>
+  {{ end }}
+</span>
+
+{{- end -}}
+</div>

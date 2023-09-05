@@ -1,0 +1,20 @@
+<p>{{ printf "%#v" . }}</p>
+<p>
+<code>Title = </code>{{ $.Page.Title }}<br />
+<code>File = </code>{{ $.Page.File }}<br />
+<code>Kind = </code>{{ .Kind }}<br />
+<code>IsNode = </code>{{ .IsNode }}<br />
+<code>IsRegularPage = </code>{{ .IsPage }}<br />
+<code>Prev = </code>{{ .Prev }}<br />
+<code>PrevPage =</code>{{ .PrevPage }}<br />
+<code>Next = </code>{{ .Next }}<br />
+<code>NextPage =</code>{{ .NextPage }}<br />
+<code>Ancestors = </code>{{ .Ancestors }}<br />
+<code>Parent =</code>{{ .Parent }}<br />
+<code>Section = </code>{{ .Section }}<br />
+<code>FirstSection =</code>{{ .FirstSection }}<br />
+<code>CurrentSection =</code>{{ .CurrentSection }}<br />
+<code>PrevInSection = </code>{{ .PrevInSection }}<br />
+<code>NextInSection = </code>{{ .NextInSection }}<br />
+<code>SubSection = </code>{{ .Sections }}<br />
+</p>
