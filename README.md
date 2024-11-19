@@ -72,14 +72,15 @@ Build the example site: (from this repo) see [`./netlify.toml`](https://github.c
     + [ ] Do something about multi-line summary style \(and all summary style\)
 - Layout
     + [ ] Add series layout (with `series_weight`, see [Taxonomy templates](https://gohugo.io/templates/taxonomy-templates/#assign-weight))
-    + [ ] Add prev/next page buttons \(done, need styling\)
+    + [ ] Add prev/next page buttons \(done, need styling, try flexbox\)
     + [x] Add beginning notes and end notes
 - Meta tags
     + [x] Add jump link to external sources
 - Others
-    + [ ] (a11y) Add jump to main button
+    + [ ] \(a11y\) Add jump to main button
     + [ ] Get the extra privacy version of the social shortcodes
     - [ ] Optimise for exporting to AO3? \([otwarchive/app/models/story_parser.rb#L586](https://github.com/otwcode/otwarchive/blob/master/app/models/story_parser.rb#L586)\)
+    - [ ] \(i18n\) Make `article` use the correct locale
 - Probably won't
     + Add pagination
     + Support LaTeX
